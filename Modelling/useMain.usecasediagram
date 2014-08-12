@@ -267,6 +267,15 @@
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <subsystem Id="e4a73340-28d4-4efc-8fa6-1b776dae9358" name="Analysis" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="307182bf-6862-4bb4-998c-4b121b236959">
+            <elementDefinition Id="dfd8344d-1ec1-437b-b197-0a87212f026b" />
+            <body>The most important task</body>
+            <annotatedElements>
+              <useCaseMoniker Id="b6d07411-9dda-427f-8d9c-bdecd58add10" LastKnownName="Analyse Presentation" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
         <elementDefinition Id="afba9dff-3a5d-4513-ba7b-6aac9b810e16" />
       </subsystem>
     </useCaseModelRootHasTypes>

@@ -22,37 +22,75 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="SmartTutor.classdiagram">
+    <Content Include="ModelDefinition\Package_1613.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SmartTutor.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>SmartTutor.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="SmartTutor.componentdiagram">
+    <Content Include="ModelDefinition\Package_1614.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SmartTutor.componentdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>SmartTutor.componentdiagram</DependentUpon>
-    </Content>
-    <Content Include="SmartTutor.sequencediagram">
+    <Content Include="ModelDefinition\Package_1617.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SmartTutor.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>SmartTutor.sequencediagram</DependentUpon>
-    </Content>
-    <Content Include="SmartTutor.usecasediagram">
+    <Content Include="ModelDefinition\Package_1618.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SmartTutor.usecasediagram.layout">
+    <Content Include="ModelDefinition\Package_1625.uml">
       <SubType>Content</SubType>
-      <DependentUpon>SmartTutor.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package_1639.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="seqPlayback.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="seqPlayback.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>seqPlayback.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="clsMain.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="clsMain.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>clsMain.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="compMain.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="compMain.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>compMain.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="seqPractice.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="seqPractice.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>seqPractice.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="useMain.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="useMain.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>useMain.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Modelling.uml">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="layerMain.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="layerMain.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>layerMain.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="layerMain.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>layerMain.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>
