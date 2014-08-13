@@ -1,10 +1,15 @@
 //
 //  Smart Tutor v1.0
 //
-//  Created: 
+//  Created: 2014.08.13
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
 
-// Smart Tutor v1.0
+#include "grabber.h"
 
+
+Grabber::Grabber(){}
+
+
+Grabber::~Grabber(){}

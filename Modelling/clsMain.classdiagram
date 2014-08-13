@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="726eae3e-a03e-477d-b032-e79342e58c3d" name="clsMain" linkedPackageId="3f97db41-3f84-42a9-bf42-0645f9d83c70" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="65e0a0a4-3a19-4044-bb6e-03a58cc09f4e">
+      <profileInstance Id="6d511f67-bc8a-498a-a4b3-6d4d7becd2a9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f9204a66-b946-415e-a384-70632c47805f">
+      <profileInstance Id="fb7beadb-6ba3-46bc-b3d3-ff7b4e3d3194" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="583dba00-4b9e-48b4-ad10-8544448a05ed" name="Recorder">
+        <elementDefinition Id="f02ed066-7b91-4387-9e2f-cb0a92483cd4" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="685f5229-6444-4a6a-ba64-bae52b4b56dc" name="Recorder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0b6b2f1e-6407-4080-89c7-922f15994ca2" />
+              <generalsInternal>
+                <generalization Id="e3a3e76f-76c4-49db-9f7f-de0409251d3c" isSubstitutable="false">
+                  <classMoniker Id="7e293374-e1b6-4eec-8cf0-81f44a463d9c" LastKnownName="AVIRecorder" />
+                  <elementDefinition Id="bf5bb73d-3d98-4a9b-9af0-b33eddd25cf9" />
+                </generalization>
+                <generalization Id="a03cc8bb-9152-480b-b19a-e6b410f3e0db" isSubstitutable="false">
+                  <classMoniker Id="b6c23706-0962-4af0-8591-f1c135a022fb" LastKnownName="ONIRecorder" />
+                  <elementDefinition Id="ab81ff80-e56f-482c-99af-1d203e5b3e50" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7e293374-e1b6-4eec-8cf0-81f44a463d9c" name="AVIRecorder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="53875f61-6f05-484a-8ff1-120832336c22" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b6c23706-0962-4af0-8591-f1c135a022fb" name="ONIRecorder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7de3b65c-c74f-4f0a-a422-56258b0d1f42" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0009fef0-b25e-4c7a-a9ad-ad897c0cbf92" name="Grabber" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f3717103-c761-4fca-8c1e-bc3f2f2731f4" />
+              <generalsInternal>
+                <generalization Id="66c89807-94ab-4976-aee2-bbc49a55d47b" isSubstitutable="false">
+                  <classMoniker Id="a3f313ad-308e-4cb6-b61e-7737bf341775" LastKnownName="KinectGrabber" />
+                  <elementDefinition Id="8ec72db7-d79e-4b8b-9c8c-f304b78e513f" />
+                </generalization>
+                <generalization Id="b99dfe88-969e-41d1-aa7c-3087f1a40267" isSubstitutable="false">
+                  <classMoniker Id="847f6469-7f99-4a07-b4e7-1a8672e337b3" LastKnownName="WebcamGrabber" />
+                  <elementDefinition Id="3a8b487b-336a-4ec1-8ae3-7908cde63ab3" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a3f313ad-308e-4cb6-b61e-7737bf341775" name="KinectGrabber" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="143f8dbe-2e30-463f-9a62-2741905d808a" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="847f6469-7f99-4a07-b4e7-1a8672e337b3" name="WebcamGrabber" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="46bada19-17e7-4ec9-83a6-383c31a802ad" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="3f97db41-3f84-42a9-bf42-0645f9d83c70" name="Modelling">
+    <elementDefinition Id="dad3c0b3-3874-4095-a287-d79eb100f63c" />
+  </package>
+</logicalClassDesignerModel>

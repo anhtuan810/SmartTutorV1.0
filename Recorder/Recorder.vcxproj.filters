@@ -38,13 +38,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="grabber.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="grabber_kinect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="grabber_webcam.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="recorder.h">
@@ -54,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="recorder_oni.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grabber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grabber_webcam.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f02ed066-7b91-4387-9e2f-cb0a92483cd4"
+  name="Recorder" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="0b6b2f1e-6407-4080-89c7-922f15994ca2"
+        name="Recorder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="bf5bb73d-3d98-4a9b-9af0-b33eddd25cf9"
+            isSubstitutable="false">
+            <classMoniker
+              Id="53875f61-6f05-484a-8ff1-120832336c22"
+              LastKnownName="AVIRecorder"
+              LastKnownLocation="Package_1022.uml" />
+          </generalization>
+          <generalization
+            Id="ab81ff80-e56f-482c-99af-1d203e5b3e50"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7de3b65c-c74f-4f0a-a422-56258b0d1f42"
+              LastKnownName="ONIRecorder"
+              LastKnownLocation="Package_1022.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="53875f61-6f05-484a-8ff1-120832336c22"
+        name="AVIRecorder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7de3b65c-c74f-4f0a-a422-56258b0d1f42"
+        name="ONIRecorder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f3717103-c761-4fca-8c1e-bc3f2f2731f4"
+        name="Grabber"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="8ec72db7-d79e-4b8b-9c8c-f304b78e513f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="143f8dbe-2e30-463f-9a62-2741905d808a"
+              LastKnownName="KinectGrabber"
+              LastKnownLocation="Package_1022.uml" />
+          </generalization>
+          <generalization
+            Id="3a8b487b-336a-4ec1-8ae3-7908cde63ab3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="46bada19-17e7-4ec9-83a6-383c31a802ad"
+              LastKnownName="WebcamGrabber"
+              LastKnownLocation="Package_1022.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="143f8dbe-2e30-463f-9a62-2741905d808a"
+        name="KinectGrabber"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="46bada19-17e7-4ec9-83a6-383c31a802ad"
+        name="WebcamGrabber"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
