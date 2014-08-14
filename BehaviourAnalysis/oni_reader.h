@@ -20,7 +20,7 @@ class ONIReader
 public:
 	ONIReader();
 	~ONIReader();
-	void ReadONI(char* file_name);
+	bool ReadONI(char* file_name);
 
 	int frame_number_;
 	bool* user_tracked_;
@@ -28,8 +28,13 @@ public:
 	cv::Mat* depth_user_frames_;
 protected:
 private:
-	char* file_name_;
+	bool InitiateOrDie();
 
+	char* file_name_;
+	openni::Device device_;
+	openni::PlaybackControl *playback_;
+	openni::VideoStream depth_stream_;
+	nite::UserTracker user_tracker_;
 };
 
 

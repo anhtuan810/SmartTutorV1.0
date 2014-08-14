@@ -19,25 +19,44 @@ ONIReader::ONIReader(){}
 
 ONIReader::~ONIReader(){}
 
-void ONIReader::ReadONI(char* file_name)
+bool ONIReader::InitiateOrDie()
 {
-	file_name_ = file_name;
+	openni::Status openni_status = OpenNI::initialize();
+	nite::Status nite_status = NiTE::initialize();
 
-	openni::OpenNI::initialize();
-	nite::NiTE::initialize();
+	openni_status = device_.open(file_name_);
+	if (openni_status != openni::STATUS_OK)
+		return false;
 
-	Device device;
-	device.open(file_name);
-	PlaybackControl *playback = device.getPlaybackControl();
-	VideoStream depth_stream;
-	UserTracker user_tracker;
-	depth_stream.create(device, SENSOR_DEPTH);
-	user_tracker.create(&device);
-	depth_stream.start();
+	playback_ = device_.getPlaybackControl();
+	openni_status = depth_stream_.create(device_, SENSOR_DEPTH);
+	if (openni_status != openni::STATUS_OK)
+		return false;
 
-	frame_number_ = playback->getNumberOfFrames(depth_stream);
+	nite_status = user_tracker_.create(&device_);
+	if (nite_status != nite::STATUS_OK)
+		return false;
+
+	openni_status = depth_stream_.start();
+	if (openni_status != openni::STATUS_OK)
+		return false;
+
+	frame_number_ = playback_->getNumberOfFrames(depth_stream_);
+	user_tracked_ = new bool[frame_number_];
 	skeletons_ = new Skeleton[frame_number_];
 	depth_user_frames_ = new Mat[frame_number_];
+
+	return true;
+}
+
+
+bool ONIReader::ReadONI(char* file_name)
+{
+	file_name_ = file_name;
+	bool init_result = InitiateOrDie();
+	if (init_result == false)
+		return false;
+
 	const int kHeight = 480;
 	const int kWidth = 640;
 
@@ -46,11 +65,11 @@ void ONIReader::ReadONI(char* file_name)
 		cout << i << "\n";
 		user_tracked_[i] = false;
 
-		playback->seek(depth_stream, i);
+		playback_->seek(depth_stream_, i);
 		VideoFrameRef depth_frame;
 		UserTrackerFrameRef user_frame;
-		depth_stream.readFrame(&depth_frame);
-		user_tracker.readFrame(&user_frame);
+		depth_stream_.readFrame(&depth_frame);
+		user_tracker_.readFrame(&user_frame);
 
 
 		// Check if contain at least one user
@@ -61,7 +80,7 @@ void ONIReader::ReadONI(char* file_name)
 
 		// Initiate skeleton tracker
 		UserData user_data = user_frame.getUsers()[0];
-		user_tracker.startSkeletonTracking(user_data.getId());
+		user_tracker_.startSkeletonTracking(user_data.getId());
 		Skeleton skeleton = user_data.getSkeleton();
 		if (skeleton.getState() != SkeletonState::SKELETON_TRACKED)
 			continue;
@@ -90,5 +109,7 @@ void ONIReader::ReadONI(char* file_name)
 		depth_user_frames_[i] = depth_user_cvmat;
 		skeletons_[i] = skeleton;
 	}
-	depth_stream.stop();
+
+	depth_stream_.stop();
+	return true;
 }
