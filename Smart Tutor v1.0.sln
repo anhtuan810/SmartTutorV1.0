@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InterfaceForGUI", "Interfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{5EF9695C-376D-4D27-A535-216041EF8CED}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BehaviourAnalysis", "BehaviourAnalysis\BehaviourAnalysis.vcxproj", "{995E7827-55D9-48C7-BB28-610618C2C19B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,19 @@ Global
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Release|Win32.ActiveCfg = Release|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Release|x64.ActiveCfg = Release|Any CPU
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|Win32.Build.0 = Debug|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|x64.ActiveCfg = Debug|x64
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Debug|x64.Build.0 = Debug|x64
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Any CPU.ActiveCfg = Release|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Win32.ActiveCfg = Release|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Win32.Build.0 = Release|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
