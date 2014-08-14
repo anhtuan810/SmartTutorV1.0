@@ -1,4 +1,13 @@
-﻿using System;
+﻿//
+//  Smart Tutor v1.0
+//	GUI
+//
+//  Created: 
+//
+//  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
+//
+
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;

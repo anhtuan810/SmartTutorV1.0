@@ -1,11 +1,11 @@
 //
 //  Smart Tutor v1.0
+//	Recorder
 //
 //  Created: 
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
-
 #include "sensor_kinect.h"
 
 void main()

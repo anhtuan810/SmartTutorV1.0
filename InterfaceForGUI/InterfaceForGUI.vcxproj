@@ -118,6 +118,9 @@
       <Project>{146aae4b-dc1a-4411-91bc-8afb27ebea0e}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="InterfaceForGUI.licenseheader" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,5 +1,6 @@
 //
 //  Smart Tutor v1.0
+//	Recorder
 //
 //  Created: 2014.08.13
 //

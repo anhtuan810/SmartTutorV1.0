@@ -1,4 +1,13 @@
-﻿using System.Reflection;
+﻿//
+//  Smart Tutor v1.0
+//	GUI
+//
+//  Created: 
+//
+//  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
+//
+
+using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;

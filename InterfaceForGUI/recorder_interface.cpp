@@ -1,30 +1,39 @@
+//
+//  Smart Tutor v1.0
+//	InterfaceForGUI
+//
+//  Created: 2014.08.14
+//
+//  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
+//
+
 #include "recorder_interface.h"
 #include "sensor_kinect.h"
 
 
 SensorKinect sensor_;
 
-void StartRecordingONI(char* file_name)
+bool IStartRecordingONI(char* file_name)
 {
-	sensor_.StartRecordingOrDie(file_name);
+	return sensor_.StartRecordingOrDie(file_name);
 }
 
-void StopRecordingONI()
+void IStopRecordingONI()
 {
 	sensor_.StopRecording();
 }
 
-void TurnOnKinectSensor()
+bool ITurnOnKinectSensor()
 {
-	sensor_.TurnOnOrDie();
+	return sensor_.TurnOnOrDie();
 }
 
-void TurnOffKinectSensor()
+void ITurnOffKinectSensor()
 {
 	sensor_.TurnOff();
 }
 
-char* GrabFrame()
+char* IGrabFrame()
 {
 	return sensor_.GrabFrame();
 }

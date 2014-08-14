@@ -1,5 +1,6 @@
 //
 //  Smart Tutor v1.0
+//	Recorder
 //
 //  Created: 2014.08.13
 //
@@ -12,10 +13,7 @@
 using namespace openni;
 
 
-SensorKinect::SensorKinect()
-{
-	sensor_state_ = SensorState::TURNED_OFF;
-}
+SensorKinect::SensorKinect(){}
 
 SensorKinect::~SensorKinect()
 {
@@ -46,7 +44,6 @@ bool SensorKinect::TurnOnOrDie()
 	if (status_openni_ != openni::STATUS_OK)
 		return false;
 
-	sensor_state_ = SensorState::TURNED_ON;
 	return true;
 }
 
@@ -73,10 +70,7 @@ bool SensorKinect::StartRecordingOrDie(const char *file_name)
 	if (recorder_.start() != ONI_STATUS_OK)
 		return false;
 	else
-	{
-		sensor_state_ = SensorState::RECORDING;
 		return true;
-	}
 }
 
 
@@ -84,7 +78,6 @@ void SensorKinect::StopRecording()
 {
 	recorder_.stop();
 	recorder_.destroy();
-	sensor_state_ = SensorState::TURNED_ON;
 }
 
 
@@ -95,5 +88,4 @@ void SensorKinect::TurnOff()
 	color_stream_.stop();
 	color_stream_.destroy();
 	device_.close();
-	sensor_state_ = SensorState::TURNED_OFF;
 }

@@ -1,5 +1,6 @@
 //
 //  Smart Tutor v1.0
+//	Recorder
 //
 //  Created: 2014.08.13
 //
@@ -10,8 +11,3 @@
 Sensor::Sensor(){}
 
 Sensor::~Sensor(){}
-
-SensorState Sensor::GetSensorState()
-{
-	return sensor_state_;
-}
