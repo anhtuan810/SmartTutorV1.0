@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InterfaceForGUI", "Interfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{5EF9695C-376D-4D27-A535-216041EF8CED}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BehaviourAnalysis", "BehaviourAnalysis\BehaviourAnalysis.vcxproj", "{995E7827-55D9-48C7-BB28-610618C2C19B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FeatureExtractor", "FeatureExtractor\FeatureExtractor.vcxproj", "{995E7827-55D9-48C7-BB28-610618C2C19B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,7 +89,8 @@ Global
 		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Win32.ActiveCfg = Release|Win32
 		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|Win32.Build.0 = Release|Win32
-		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|x64.ActiveCfg = Release|Win32
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|x64.ActiveCfg = Release|x64
+		{995E7827-55D9-48C7-BB28-610618C2C19B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

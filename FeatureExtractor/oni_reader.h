@@ -1,8 +1,8 @@
 //
 //  Smart Tutor v1.0
-//	Behaviour Analysis
+//	Feature Extractor
 //
-//  Created: 2014.08.14
+//  Created: 
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
@@ -14,6 +14,7 @@
 #include <OpenNI.h>
 #include <NiTE.h>
 #include <opencv2\core\core.hpp>
+#include <vector>
 
 class ONIReader
 {
@@ -22,10 +23,11 @@ public:
 	~ONIReader();
 	bool ReadONI(char* file_name);
 
-	int frame_number_;
-	bool* user_tracked_;
-	nite::Skeleton* skeletons_;
-	cv::Mat* depth_user_frames_;
+	int frame_no_;
+	std::vector<bool> user_tracked_;
+	std::vector<nite::Skeleton> skeletons_;
+	std::vector<cv::Mat> depth_user_frames_;
+
 protected:
 private:
 	bool InitiateOrDie();

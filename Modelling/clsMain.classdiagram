@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="726eae3e-a03e-477d-b032-e79342e58c3d" name="clsMain" linkedPackageId="3f97db41-3f84-42a9-bf42-0645f9d83c70" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="726eae3e-a03e-477d-b032-e79342e58c3d" name="clsMain" linkedPackageId="3f97db41-3f84-42a9-bf42-0645f9d83c70" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="583dba00-4b9e-48b4-ad10-8544448a05ed" name="Recorder">
@@ -236,6 +236,17 @@
           <packageHasNamedElement>
             <class Id="4f5e04a1-006d-4d92-a4ee-a2687b65791d" name="Result" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="82d9b885-dc3d-4b78-8bcd-6d98566d1b33" />
+              <ownedAttributesInternal>
+                <property Id="5aaf7e91-32bc-448f-9974-d97c286eb2a1" name="overall_score_" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b03c55b9-89ee-499e-a1dc-ed3d630750f8" />
+                </property>
+                <property Id="99d794a0-6ca3-44b3-902a-b578ff907359" name="score_contraction_" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9776525d-52c8-4d72-86f8-9c0b05ecfd5c" />
+                </property>
+                <property Id="e54cdd73-b510-4a5b-8f9c-50e74ca53ae9" name="score_stability_" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f7f26cae-9626-4acb-b886-63d4cbceb113" />
+                </property>
+              </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
