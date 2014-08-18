@@ -9,6 +9,7 @@
 
 #include "feature_energy.h"
 #include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
 #include "img_processing_functions.h"
 
 FeatureEnergy::FeatureEnergy(){}

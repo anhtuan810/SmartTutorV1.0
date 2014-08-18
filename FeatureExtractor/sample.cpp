@@ -227,15 +227,15 @@ std::vector<cv::Mat> Sample::Project(Mat &input)
 			if (value > 0 && value / iDepthRatio < iDepth)
 			{
 				matZ.at<uint16_t>(h, w) = value;
-				matX.at<uint16_t>(h, value / iDepthRatio) = 65535;
-				matY.at<uint16_t>(value / iDepthRatio, w) = 65535;
+				matX.at<uint16_t>(h, value / iDepthRatio) = 255;
+				matY.at<uint16_t>(value / iDepthRatio, w) = 255;
 			}
 		}
 	}
 
 	std::vector<cv::Mat> result;
-	result.push_back(Dilation(matX));
-	result.push_back(Dilation(matY));
+	result.push_back(matX);
+	result.push_back(matY);
 	result.push_back(matZ);
 
 	return result;

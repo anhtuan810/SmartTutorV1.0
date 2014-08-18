@@ -29,8 +29,6 @@ FeatureDirection::~FeatureDirection(){};
 //************************************
 double FeatureDirection::GetDirection(Sample &sample)
 {
-
-
 	//----------------------------------------------------------
 	// Push new sample to buffer
 	int kBuffSize = 10;
@@ -44,7 +42,7 @@ double FeatureDirection::GetDirection(Sample &sample)
 	std::vector<cv::Mat> buff_proj_X;
 	for (size_t i = 0; i < buff_sample.size(); i++)
 	{
-		buff_proj_X.push_back(sample.proj_X_);
+		buff_proj_X.push_back(buff_sample[i].proj_X_);
 	}
 
 	//----------------------------------------------------------
@@ -81,7 +79,6 @@ double FeatureDirection::GetDirection(Sample &sample)
 			direction = (double)(area_right - area_left) / area_user_region;
 		}
 	}
-
 	return direction;
 }
 
@@ -96,10 +93,6 @@ double FeatureDirection::GetDirection(Sample &sample)
 //************************************
 cv::Point FeatureDirection::GetCentralMat(cv::Mat &input)
 {
-	cv::namedWindow("test");
-	cv::imshow("test", input);
-	cv::waitKey(20);
-
 	int height = input.size().height;
 	int width = input.size().width;
 	double sumH = 0;

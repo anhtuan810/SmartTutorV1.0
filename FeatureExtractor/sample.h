@@ -25,7 +25,7 @@ public:
 	cv::Mat depth_upper_;
 	cv::Mat depth_lower_;
 	cv::Mat depth_upper_shifted_;
-	cv::Mat depth_lower_shifted_;	
+	cv::Mat depth_lower_shifted_;
 	cv::Mat proj_X_, proj_Y_, proj_Z_;
 	cv::Mat proj_upper_shifted_X_, proj_upper_shifted_Y_, proj_upper_shifted_Z_;
 	cv::Mat proj_lower_shifted_X_, proj_lower_shifted_Y_, proj_lower_shifted_Z_;
