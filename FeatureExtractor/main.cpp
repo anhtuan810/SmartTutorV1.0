@@ -21,4 +21,4 @@ void main()
 	{
 		std::cout << feature_manager.feature_direction_[i] << "\n";
 	}
-}	
+}

@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="feature_contraction.h" />
     <ClInclude Include="feature_direction.h" />
+    <ClInclude Include="feature_displacement.h" />
     <ClInclude Include="feature_energy.h" />
     <ClInclude Include="feature_impulse.h" />
     <ClInclude Include="feature_manager.h" />
@@ -123,6 +124,7 @@
   <ItemGroup>
     <ClCompile Include="feature_contraction.cpp" />
     <ClCompile Include="feature_direction.cpp" />
+    <ClCompile Include="feature_displacement.cpp" />
     <ClCompile Include="feature_energy.cpp" />
     <ClCompile Include="feature_impulse.cpp" />
     <ClCompile Include="feature_manager.cpp" />

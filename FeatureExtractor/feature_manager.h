@@ -27,6 +27,7 @@ public:
 	std::vector<double> feature_energy_;
 	std::vector<double> feature_direction_;
 	std::vector<double> feature_impulse_;
+	std::vector<double> feature_displacement_;
 
 protected:
 private:

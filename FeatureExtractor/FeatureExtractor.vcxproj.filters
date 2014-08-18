@@ -31,6 +31,9 @@
     <ClCompile Include="feature_direction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="feature_displacement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="feature_direction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="feature_displacement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
