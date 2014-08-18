@@ -2,13 +2,14 @@
 //  Smart Tutor v1.0
 //	Feature Extractor
 //
-//  Created: 
+//  Created: 2014.08.14
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
 
 #include "oni_reader.h"
 #include <iostream>
+#include <opencv2/highgui/highgui.hpp>
 
 using namespace openni;
 using namespace nite;

@@ -1,3 +1,12 @@
+//
+//  Smart Tutor v1.0
+//	Feature Extractor
+//
+//  Created: 2014.08.15
+//
+//  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
+//
+
 #include "feature_stability.h"
 #include "img_processing_functions.h"
 

@@ -2,7 +2,7 @@
 //  Smart Tutor v1.0
 //	Feature Extractor
 //
-//  Created: 
+//  Created: 2014.08.15
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
@@ -11,6 +11,7 @@
 #include "img_processing_functions.h"
 #include <limits>
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 using namespace cv;
 using namespace std;
@@ -204,14 +205,16 @@ cv::Mat Sample::CenterImg(cv::Mat &input_frame)
 // Qualifier:
 // Parameter: Mat & input_frame
 //************************************
-std::vector<cv::Mat> Sample::Project(Mat &input_frame)
+std::vector<cv::Mat> Sample::Project(Mat &input)
 {
 	const int kDepthMax = 50000;
 	Mat matX, matY, matZ;
 
-	const int iHeight = input_frame.size().height;
-	const int iWidth = input_frame.size().width;
+	const int iHeight = input.size().height;
+	const int iWidth = input.size().width;
 	const int iDepth = kDepthMax / 100;
+	const int iDepthRatio = 10;
+
 	matX = Mat(iHeight, iDepth, CV_16U) = cv::Scalar(0, 0, 0);
 	matY = Mat(iDepth, iWidth, CV_16U) = cv::Scalar(0, 0, 0);
 	matZ = Mat(iHeight, iWidth, CV_16U) = cv::Scalar(0, 0, 0);
@@ -220,20 +223,40 @@ std::vector<cv::Mat> Sample::Project(Mat &input_frame)
 	{
 		for (size_t w = 0; w < iWidth; w++)
 		{
-			uint16_t value = input_frame.at<uint16_t>(h, w);
-			if (value > 0)
+			uint16_t value = input.at<uint16_t>(h, w);
+			if (value > 0 && value / iDepthRatio < iDepth)
 			{
 				matZ.at<uint16_t>(h, w) = value;
-				matX.at<uint16_t>(h, value / 100) = 65535;
-				matY.at<uint16_t>(value / 100, w) = 65535;
+				matX.at<uint16_t>(h, value / iDepthRatio) = 65535;
+				matY.at<uint16_t>(value / iDepthRatio, w) = 65535;
 			}
 		}
 	}
 
 	std::vector<cv::Mat> result;
-	result.push_back(matX);
-	result.push_back(matY);
+	result.push_back(Dilation(matX));
+	result.push_back(Dilation(matY));
 	result.push_back(matZ);
+
 	return result;
 }
 
+
+//************************************
+// Method:    Dilation
+// Dilate the projected depth frames (only lines without dilation)
+// FullName:  ImgProcessingFunctions::Dilation
+// Access:    public 
+// Returns:   cv::Mat
+// Qualifier:
+// Parameter: cv::Mat & input
+//************************************
+cv::Mat Sample::Dilation(cv::Mat &input)
+{
+	const int kErosionSize = 6;
+	cv::Mat element = cv::getStructuringElement(cv::MORPH_ELLIPSE,
+		cv::Size(2 * kErosionSize + 1, 2 * kErosionSize + 1));
+	cv::Mat dst;
+	cv::dilate(input, dst, element);
+	return dst;
+}

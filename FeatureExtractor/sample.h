@@ -2,7 +2,7 @@
 //  Smart Tutor v1.0
 //	Feature Extractor
 //
-//  Created: 
+//  Created: 2014.08.15
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
@@ -37,6 +37,7 @@ private:
 	cv::Mat GetLowerBody(cv::Mat &input);
 	cv::Mat CenterImg(cv::Mat &input);
 	std::vector<cv::Mat> Project(cv::Mat &input);
+	cv::Mat Dilation(cv::Mat &input);
 };
 
 #endif

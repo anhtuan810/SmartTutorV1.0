@@ -19,6 +19,6 @@ void main()
 	feature_manager.ReceiveONIReader_n_Process(reader.depth_user_frames_, reader.skeletons_, reader.user_tracked_, reader.frame_no_);
 	for (size_t i = 0; i < feature_manager.frame_no_; i++)
 	{
-		std::cout << feature_manager.feature_stability_[i] << "\n";
+		std::cout << feature_manager.feature_direction_[i] << "\n";
 	}
-}
+}	

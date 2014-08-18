@@ -2,7 +2,7 @@
 //  Smart Tutor v1.0
 //	Feature Extractor
 //
-//  Created: 
+//  Created: 2014.08.15
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
@@ -269,3 +269,6 @@ cv::Mat ImgProcessingFunctions::ExtractUpperBody(cv::Mat input_frame, float rati
 	matUpper(rectLow) = 0;
 	return matUpper;
 }
+
+
+

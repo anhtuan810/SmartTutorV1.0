@@ -111,6 +111,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="feature_contraction.h" />
+    <ClInclude Include="feature_direction.h" />
+    <ClInclude Include="feature_energy.h" />
+    <ClInclude Include="feature_impulse.h" />
     <ClInclude Include="feature_manager.h" />
     <ClInclude Include="feature_stability.h" />
     <ClInclude Include="img_processing_functions.h" />
@@ -119,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="feature_contraction.cpp" />
+    <ClCompile Include="feature_direction.cpp" />
+    <ClCompile Include="feature_energy.cpp" />
+    <ClCompile Include="feature_impulse.cpp" />
     <ClCompile Include="feature_manager.cpp" />
     <ClCompile Include="feature_stability.cpp" />
     <ClCompile Include="img_processing_functions.cpp" />

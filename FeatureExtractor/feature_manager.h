@@ -19,18 +19,18 @@ class FeatureManager
 public:
 	FeatureManager();
 	~FeatureManager();
-	void ReceiveONIReader_n_Process(
-		std::vector<cv::Mat> depth_frames, 
-		std::vector<nite::Skeleton> skeletons,
-		std::vector<bool> user_tracked,
-		const int frame_no);
+	void ReceiveONIReader_n_Process(std::vector<cv::Mat> depth_frames, std::vector<nite::Skeleton> skeletons, std::vector<bool> user_tracked, const int frame_no);
 
 	int frame_no_;
 	std::vector<double> feature_contraction_;
 	std::vector<double> feature_stability_;
+	std::vector<double> feature_energy_;
+	std::vector<double> feature_direction_;
+	std::vector<double> feature_impulse_;
 
 protected:
 private:
+	std::vector<double> energy_buffer_4_impulse_;
 };
 
 #endif
