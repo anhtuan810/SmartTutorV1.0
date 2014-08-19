@@ -1,0 +1,18 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:k="http://schemas.microsoft.com/kinect/2013"
+	mc:Ignorable="d"
+	x:Class="GUI.ucHome"
+	x:Name="UserControl"
+	d:DesignWidth="871" d:DesignHeight="640">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid Height="223" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="530">
+			<k:KinectTileButton Content="Practice" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
+			<k:KinectTileButton Content="View Results" HorizontalAlignment="Left" Margin="310.5,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+		</Grid>
+	</Grid>
+</UserControl>

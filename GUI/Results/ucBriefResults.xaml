@@ -1,0 +1,29 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:GUI"
+	mc:Ignorable="d"
+	x:Class="GUI.ucBriefResults"
+	x:Name="UserControl" Height="755" Width="1122">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="383*"/>
+			<ColumnDefinition Width="602*"/>
+		</Grid.ColumnDefinitions>
+		<Grid x:Name="Overall_Playback" Margin="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="284*"/>
+				<RowDefinition Height="413*"/>
+			</Grid.RowDefinitions>
+			<local:ucMediaPlayer Margin="0"/>
+		</Grid>
+		<Grid x:Name="Features" Grid.Column="1" Margin="0">
+			<local:usOneFeature HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+			<local:usOneFeature HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top"/>
+			<local:usOneFeature HorizontalAlignment="Left" Margin="10,497,0,0" VerticalAlignment="Top"/>
+		</Grid>
+	</Grid>
+</UserControl>

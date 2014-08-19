@@ -15,18 +15,18 @@ using DirectX.Capture;
 
 namespace RecorderAVI
 {
-    public class sensor_webcam
+    public class SensorWebcam
     {
         private Filters filters_;
         private Capture capture_;
 
-        public sensor_webcam()
+        public SensorWebcam()
         {
             filters_ = new Filters();
             capture_ = new Capture(filters_.VideoInputDevices[0], filters_.AudioInputDevices[0]);
         }
 
-        public sensor_webcam(int video_id, int audio_id)
+        public SensorWebcam(int video_id, int audio_id)
         {
             filters_ = new Filters();
             capture_ = new Capture(filters_.VideoInputDevices[video_id], filters_.AudioInputDevices[audio_id]);
