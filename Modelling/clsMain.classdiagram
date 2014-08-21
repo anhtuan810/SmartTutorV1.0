@@ -354,6 +354,11 @@
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="958b49aa-e262-4652-8e7e-5b506ea4090f" name="Feature Analyser">
+        <elementDefinition Id="d7b99ed9-700c-4f3d-9091-672f611e3f51" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <package Id="3f97db41-3f84-42a9-bf42-0645f9d83c70" name="Modelling">
     <elementDefinition Id="dad3c0b3-3874-4095-a287-d79eb100f63c" />

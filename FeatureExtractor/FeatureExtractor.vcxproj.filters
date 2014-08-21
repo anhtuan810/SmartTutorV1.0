@@ -16,9 +16,6 @@
     <ClCompile Include="img_processing_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="feature_manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="feature_stability.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -32,6 +29,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="feature_displacement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="feature_extractor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,9 +56,6 @@
     <ClInclude Include="img_processing_functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="feature_manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="feature_stability.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="feature_displacement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="feature_extractor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

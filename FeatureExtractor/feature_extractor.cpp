@@ -3,11 +3,12 @@
 //	Feature Extractor
 //
 //  Created: 2014.08.15
+//	- 2014.08.20: Added the Save_To_Files function 
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
 
-#include "feature_manager.h"
+#include "feature_extractor.h"
 #include "sample.h"
 #include "feature_contraction.h"
 #include "feature_stability.h"
@@ -17,12 +18,17 @@
 #include "feature_displacement.h"
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
+#include <fstream>
 
-FeatureManager::FeatureManager(){}
-FeatureManager::~FeatureManager(){}
+FeatureExtractor::FeatureExtractor(){}
+FeatureExtractor::~FeatureExtractor(){}
 
-
-void FeatureManager::ReceiveONIReader_n_Process(std::vector<cv::Mat> depth_frames, std::vector<nite::Skeleton> skeletons, std::vector<bool> user_tracked, const int frame_no)
+/////////////////////////////////////////////////////////////////////////////////////////////////
+void FeatureExtractor::ReceiveONIReader_n_Process(
+	std::vector<cv::Mat> depth_frames, 
+	std::vector<nite::Skeleton> skeletons, 
+	std::vector<bool> user_tracked, 
+	const int frame_no)
 {
 	frame_no_ = frame_no;
 	FeatureContraction contraction_extractor;
@@ -59,4 +65,28 @@ void FeatureManager::ReceiveONIReader_n_Process(std::vector<cv::Mat> depth_frame
 
 	// Impulse only computed in the end, after everything is completed
 	feature_impulse_ = impulse_extractor.GetImpulseList(feature_energy_);
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+void FeatureExtractor::Save_2_Files(char* folder_path)
+{
+	Save_One_Feature_2_File(std::string(folder_path) + "contraction.txt", feature_contraction_);
+	Save_One_Feature_2_File(std::string(folder_path) + "direction.txt", feature_direction_);
+	Save_One_Feature_2_File(std::string(folder_path) + "displacement.txt", feature_displacement_);
+	Save_One_Feature_2_File(std::string(folder_path) + "energy.txt", feature_energy_);
+	Save_One_Feature_2_File(std::string(folder_path) + "impulse.txt", feature_impulse_);
+	Save_One_Feature_2_File(std::string(folder_path) + "stability.txt", feature_stability_);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+void FeatureExtractor::Save_One_Feature_2_File(std::string file_name, std::vector<double> feature)
+{
+	std::ofstream writer(file_name);
+	for (size_t i = 0; i < feature.size(); ++i)
+	{
+		writer << feature[i] << "\n";
+	}
+	writer.close();
 }

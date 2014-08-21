@@ -19,14 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{995E7827-55D9-48C7-BB28-610618C2C19B}</ProjectGuid>
-    <RootNamespace>BehaviourAnalysis</RootNamespace>
+    <ProjectGuid>{92C664C8-C086-4B95-B022-FF5737EBE47B}</ProjectGuid>
+    <RootNamespace>FeatureAnalyser</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -37,7 +37,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PlatformToolset>v120</PlatformToolset>
@@ -55,7 +55,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>..\Bin\$(Configuration)\</OutDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\Bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>..\Bin\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -63,12 +69,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENNI2_INCLUDE64); $(NITE2_INCLUDE64); C:\opencv\build\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OPENNI2_LIB64); $(NITE2_LIB64); C:\opencv\build\x64\vc10\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;opencv_features2d248.lib;opencv_video248.lib;opencv_highgui248.lib;opencv_core248.lib;opencv_imgproc248.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,64 +81,36 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENNI2_INCLUDE64); $(NITE2_INCLUDE64); C:\opencv\build\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(OPENNI2_LIB64); $(NITE2_LIB64); C:\opencv\build\x64\vc10\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;opencv_features2d248.lib;opencv_video248.lib;opencv_highgui248.lib;opencv_core248.lib;opencv_imgproc248.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(OPENNI2_INCLUDE64); $(NITE2_INCLUDE64); C:\opencv\build\include</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(OPENNI2_LIB64); $(NITE2_LIB64); C:\opencv\build\x64\vc10\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;opencv_features2d248.lib;opencv_video248.lib;opencv_highgui248.lib;opencv_core248.lib;opencv_imgproc248.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>$(OPENNI2_INCLUDE64); $(NITE2_INCLUDE64); C:\opencv\build\include</AdditionalIncludeDirectories>
-      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
-    </ClCompile>
-    <Link>
-      <AdditionalLibraryDirectories>$(OPENNI2_LIB64); $(NITE2_LIB64); C:\opencv\build\x64\vc10\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;opencv_features2d248.lib;opencv_video248.lib;opencv_highgui248.lib;opencv_core248.lib;opencv_imgproc248.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="feature_contraction.h" />
-    <ClInclude Include="feature_direction.h" />
-    <ClInclude Include="feature_displacement.h" />
-    <ClInclude Include="feature_energy.h" />
-    <ClInclude Include="feature_impulse.h" />
-    <ClInclude Include="feature_extractor.h" />
-    <ClInclude Include="feature_stability.h" />
-    <ClInclude Include="img_processing_functions.h" />
-    <ClInclude Include="oni_reader.h" />
-    <ClInclude Include="sample.h" />
+    <ClInclude Include="assessment_overall.h" />
+    <ClInclude Include="feature_analyser.h" />
+    <ClInclude Include="thresholding_result.h" />
+    <ClInclude Include="thresholds_n_codewords.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="feature_contraction.cpp" />
-    <ClCompile Include="feature_direction.cpp" />
-    <ClCompile Include="feature_displacement.cpp" />
-    <ClCompile Include="feature_energy.cpp" />
-    <ClCompile Include="feature_impulse.cpp" />
-    <ClCompile Include="feature_extractor.cpp" />
-    <ClCompile Include="feature_stability.cpp" />
-    <ClCompile Include="img_processing_functions.cpp" />
+    <ClCompile Include="assessment_overall.cpp" />
+    <ClCompile Include="feature_analyser.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="oni_reader.cpp" />
-    <ClCompile Include="sample.cpp" />
+    <ClCompile Include="thresholding_result.cpp" />
+    <ClCompile Include="thresholds_n_codewords.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FeatureExtractor2.licenseheader" />
+    <None Include="FeatureAnalyser.licenseheader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
