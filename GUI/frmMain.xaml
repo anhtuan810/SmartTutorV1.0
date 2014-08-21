@@ -8,6 +8,6 @@
 	Width="1600" Height="900">
 
     <Grid x:Name="LayoutRoot" Height="900" Width="1600">
-    	<local:ucPractice Margin="0"/>
+        <local:ucHome HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,307.5,0,0"/>
     </Grid>
 </Window>

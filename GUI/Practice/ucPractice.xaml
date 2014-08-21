@@ -4,17 +4,39 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:k="http://schemas.microsoft.com/kinect/2013"
+	xmlns:local="clr-namespace:GUI"
 	mc:Ignorable="d"
 	x:Class="GUI.ucPractice"
 	x:Name="UserControl" Height="898" Width="1600">
 
 	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
+			<ColumnDefinition Width="10"/>
+			<ColumnDefinition Width="70*"/>
+			<ColumnDefinition Width="30*"/>
+			<ColumnDefinition Width="10"/>
 		</Grid.ColumnDefinitions>
-		<Image x:Name="imgUser" Margin="0" OpacityMask="Black"/>
-		<Grid Height="42" Margin="0" VerticalAlignment="Bottom" Background="Black" Opacity="0.4">
-			<Label Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFF8F8" FontSize="24"/>
+		<local:ucTitle VerticalAlignment="Center" Width="1600" Grid.ColumnSpan="4"/>
+		<Grid Grid.Column="1" Margin="0,20,10,0" Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Image x:Name="imgKinect" Margin="0" Grid.Row="1"/>
+			<Label Content="Microsoft Kinect" Margin="0" FontSize="24"/>
+		</Grid>
+		<Grid Grid.Column="2" Margin="10,20,0,0" Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="400"/>
+				<RowDefinition Height="40"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Label Content="Webcam ABC" Margin="0" Grid.Row="1" FontSize="24"/>
+			<Image x:Name="imgWebcam" Margin="0" Grid.Row="2"/>
 		</Grid>
 	</Grid>
 </UserControl>

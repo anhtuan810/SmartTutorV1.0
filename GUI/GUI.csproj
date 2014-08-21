@@ -88,6 +88,12 @@
     <Compile Include="Home\ucHome.xaml.cs">
       <DependentUpon>ucHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Home\ucTitle.xaml.cs">
+      <DependentUpon>ucTitle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Practice\ucPractice_FullScreen.xaml.cs">
+      <DependentUpon>ucPractice_FullScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Practice\ucPractice.xaml.cs">
       <DependentUpon>ucPractice.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="Results\ucMediaPlayer.xaml.cs">
       <DependentUpon>ucMediaPlayer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Results\ucOneFeature.xaml.cs">
+      <DependentUpon>ucOneFeature.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Results\usOneFeature.xaml.cs">
       <DependentUpon>usOneFeature.xaml</DependentUpon>
     </Compile>
@@ -119,6 +128,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Home\ucTitle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Practice\ucPractice_FullScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Practice\ucPractice.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -136,6 +153,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Results\ucMediaPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Results\ucOneFeature.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -170,7 +191,10 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Home\guestpresenter.jpg" />
+    <Resource Include="Home\progress.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

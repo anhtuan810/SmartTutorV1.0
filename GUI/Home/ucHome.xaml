@@ -4,15 +4,17 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:k="http://schemas.microsoft.com/kinect/2013"
+	xmlns:local="clr-namespace:GUI"
 	mc:Ignorable="d"
 	x:Class="GUI.ucHome"
 	x:Name="UserControl"
 	d:DesignWidth="871" d:DesignHeight="640" Width="1600" Height="900">
 
 	<Grid x:Name="LayoutRoot">
-		<Grid Height="223" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="530">
-			<k:KinectTileButton Content="Practice" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
-			<k:KinectTileButton Content="View Results" HorizontalAlignment="Left" Margin="310.5,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+		<Grid Height="251.5" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="609.5">
+			<k:KinectTileButton Content="PRACTICE" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="250" Height="250"/>
+			<k:KinectTileButton Content="PROGRESS" HorizontalAlignment="Left" Margin="359.5,0,0,0" VerticalAlignment="Top" Foreground="White" Width="250" Height="250"/>
 		</Grid>
+		<local:ucTitle Margin="0,10,0,0" VerticalAlignment="Top" Width="1600"/>
 	</Grid>
 </UserControl>

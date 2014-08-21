@@ -6,19 +6,19 @@
 	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
 	mc:Ignorable="d"
 	x:Class="GUI.usOneFeature"
-	x:Name="UserControl" Height="215" Width="520">
+	x:Name="UserControl" Height="200" Width="552">
 
-	<Grid x:Name="LayoutRoot">
-		<Grid Margin="0" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+	<Grid x:Name="LayoutRoot" Margin="0">
+		<Grid Margin="0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="100*"/>
 				<ColumnDefinition Width="30"/>
 				<ColumnDefinition Width="200"/>
 			</Grid.ColumnDefinitions>
-			<Ellipse Fill="White" Stroke="Black" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2"/>
-			<ed:Arc x:Name="arc1" ArcThickness="100" ArcThicknessUnit="Pixel" EndAngle="40" Fill="#FF5D5D99" HorizontalAlignment="Left" Height="200" Stretch="None" Stroke="Black" StartAngle="0" VerticalAlignment="Top" Width="200" StrokeThickness="0" Grid.Column="2"/>
-			<ed:Arc x:Name="arc2" ArcThickness="100" ArcThicknessUnit="Pixel" EndAngle="200" Fill="#FF835341" HorizontalAlignment="Left" Height="200" Stretch="None" Stroke="Black" StartAngle="40" VerticalAlignment="Top" Width="200" StrokeThickness="0" Grid.Column="2"/>
-			<ed:Arc x:Name="arc3" ArcThickness="100" ArcThicknessUnit="Pixel" EndAngle="360" Fill="#FF80809B" HorizontalAlignment="Left" Height="200" Stretch="None" Stroke="Black" StrokeThickness="0" StartAngle="200" VerticalAlignment="Top" Width="200" Grid.Column="2"/>
+			<Ellipse Fill="White" Stroke="Black" Grid.Column="2"/>
+			<ed:Arc x:Name="arc1" ArcThickness="100" ArcThicknessUnit="Pixel" EndAngle="40" Fill="#FF141414" Stretch="None" Stroke="Black" StartAngle="0" StrokeThickness="0" Grid.Column="2"/>
+			<ed:Arc x:Name="arc2" ArcThickness="100" ArcThicknessUnit="Pixel" EndAngle="200" Fill="#FF706561" Stretch="None" Stroke="Black" StartAngle="40" StrokeThickness="0" Grid.Column="2"/>
+			<ed:Arc x:Name="arc3" ArcThickness="100" ArcThicknessUnit="Pixel" EndAngle="360" Fill="#FFC8C8C8" Stretch="None" Stroke="Black" StrokeThickness="0" StartAngle="200" Grid.Column="2"/>
 			<Grid>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="37"/>
@@ -33,13 +33,10 @@
 					<RowDefinition Height="32*"/>
 					<RowDefinition Height="2*"/>
 				</Grid.RowDefinitions>
-				<Label x:Name="lblNameCW2" Content="Codeword 2 " Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="18.667" Grid.Column="1"/>
-				<Label x:Name="lblNameCW3" Content="Codeword 3 " Margin="0" Grid.Row="4" VerticalAlignment="Center" FontSize="18.667" Grid.Column="1"/>
-				<Label Content="20.1%" Grid.Column="2" Margin="0" Grid.Row="2" VerticalAlignment="Center" FontSize="18.667" FontWeight="Bold"/>
-				<Label Content="20.2%" Grid.Column="2" Margin="0" Grid.Row="3" FontSize="18.667" FontWeight="Bold" VerticalAlignment="Center"/>
-				<Label Content="20.3%" Grid.Column="2" Margin="0" Grid.Row="4" FontSize="18.667" FontWeight="Bold" VerticalAlignment="Center"/>
-				<Label x:Name="lblNameCW1" Content="Codeword 1 " Margin="0" Grid.Row="2" VerticalAlignment="Center" FontSize="18.667" Grid.Column="1"/>
-				<Label x:Name="lblFeatureName" Content="Contraction" Margin="0,7.538" VerticalAlignment="Center" FontSize="24" Grid.ColumnSpan="3" Width="229"/>
+				<Label x:Name="lblNameCW2" Content="Codeword 2 " Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="14.667" Grid.Column="1"/>
+				<Label x:Name="lblNameCW3" Content="Codeword 3 " Margin="0" Grid.Row="4" VerticalAlignment="Center" FontSize="14.667" Grid.Column="1"/>
+				<Label x:Name="lblNameCW1" Content="Codeword 1 " Margin="0" Grid.Row="2" VerticalAlignment="Center" FontSize="14.667" Grid.Column="1"/>
+				<Label x:Name="lblFeatureName" Content="Contraction" Margin="0,7.538" VerticalAlignment="Center" FontSize="26.667" Grid.ColumnSpan="3" HorizontalAlignment="Left"/>
 				<Rectangle x:Name="colorCW1" Fill="#FF5D5D99" HorizontalAlignment="Center" Height="22" Margin="0" Grid.Row="2" Stroke="Black" StrokeThickness="0" VerticalAlignment="Center" Width="22"/>
 				<Rectangle x:Name="colorCW2" Fill="#FF835341" HorizontalAlignment="Center" Height="22" Margin="0" Grid.Row="3" Stroke="Black" StrokeThickness="0" VerticalAlignment="Center" Width="22"/>
 				<Rectangle x:Name="colorCW3" Fill="#FF80809B" HorizontalAlignment="Center" Height="22" Margin="0" Grid.Row="4" Stroke="Black" StrokeThickness="0" VerticalAlignment="Center" Width="22"/>
