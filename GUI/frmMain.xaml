@@ -5,9 +5,9 @@
 	x:Class="GUI.frmMain"
 	x:Name="Window"
 	Title="frmMain"
-	Width="640" Height="480">
+	Width="1600" Height="900">
 
-    <Grid x:Name="LayoutRoot">
-        <local:usOneFeature HorizontalAlignment="Left" Margin="38,82,0,0" VerticalAlignment="Top"/>
+    <Grid x:Name="LayoutRoot" Height="900" Width="1600">
+    	<local:ucPractice Margin="0"/>
     </Grid>
 </Window>

@@ -6,19 +6,19 @@
 	xmlns:local="clr-namespace:GUI"
 	mc:Ignorable="d"
 	x:Class="GUI.ucBriefResults"
-	x:Name="UserControl" Height="755" Width="1122">
+	x:Name="UserControl" Height="900" Width="1600">
 
-	<Grid x:Name="LayoutRoot">
+	<Grid x:Name="LayoutRoot" Height="900">
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="383*"/>
-			<ColumnDefinition Width="602*"/>
+			<ColumnDefinition Width="640"/>
+			<ColumnDefinition Width="100*"/>
 		</Grid.ColumnDefinitions>
 		<Grid x:Name="Overall_Playback" Margin="0">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="284*"/>
-				<RowDefinition Height="413*"/>
+				<RowDefinition Height="480"/>
+				<RowDefinition Height="100*"/>
 			</Grid.RowDefinitions>
-			<local:ucMediaPlayer Margin="0"/>
+			<local:ucMediaPlayer Margin="0" Height="480"/>
 		</Grid>
 		<Grid x:Name="Features" Grid.Column="1" Margin="0">
 			<local:usOneFeature HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>

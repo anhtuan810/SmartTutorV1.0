@@ -6,7 +6,7 @@
 	xmlns:k="http://schemas.microsoft.com/kinect/2013"
 	mc:Ignorable="d"
 	x:Class="GUI.ucPractice"
-	x:Name="UserControl" Height="647" Width="953">
+	x:Name="UserControl" Height="898" Width="1600">
 
 	<Grid x:Name="LayoutRoot">
 		<Grid.ColumnDefinitions>

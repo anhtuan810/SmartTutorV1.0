@@ -7,7 +7,7 @@
 	mc:Ignorable="d"
 	x:Class="GUI.ucHome"
 	x:Name="UserControl"
-	d:DesignWidth="871" d:DesignHeight="640">
+	d:DesignWidth="871" d:DesignHeight="640" Width="1600" Height="900">
 
 	<Grid x:Name="LayoutRoot">
 		<Grid Height="223" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="530">
