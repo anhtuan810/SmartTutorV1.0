@@ -35,25 +35,19 @@ void FeatureAnalyser::ReadFeatures(
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-void FeatureAnalyser::ReadFeatures_FromFiles(
-	char* file_contraction, 
-	char* file_stability, 
-	char* file_energy, 
-	char* file_direction, 
-	char* file_impulse, 
-	char* file_displacement)
+void FeatureAnalyser::ReadFeatures_FromFiles(std::string data_folder)
 {
-	feature_contraction_ = Read_One_File(file_contraction);
-	feature_stability_ = Read_One_File(file_stability);
-	feature_energy_ = Read_One_File(file_energy);
-	feature_direction_ = Read_One_File(file_direction);
-	feature_impulse_ = Read_One_File(file_impulse);
-	feature_displacement_ = Read_One_File(file_displacement);
+	feature_contraction_ = Read_One_File(data_folder + "contraction.txt");
+	feature_stability_ = Read_One_File(data_folder + "stability.txt");
+	feature_energy_ = Read_One_File(data_folder + "energy.txt");
+	feature_direction_ = Read_One_File(data_folder + "direction.txt");
+	feature_impulse_ = Read_One_File(data_folder + "impulse.txt");
+	feature_displacement_ = Read_One_File(data_folder + "displacement.txt");
 }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-std::vector<double> FeatureAnalyser::Read_One_File(char* file_name)
+std::vector<double> FeatureAnalyser::Read_One_File(std::string file_name)
 {
 	vector<double> feature;
 	ifstream reader(file_name);

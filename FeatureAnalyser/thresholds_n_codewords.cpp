@@ -11,7 +11,10 @@
 #include <limits>
 
 
-Thresholds::Thresholds(){}
+Thresholds::Thresholds()
+{
+	kCodewordsNo = 14;
+}
 Thresholds::~Thresholds(){}
 
 

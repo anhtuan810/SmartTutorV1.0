@@ -14,6 +14,7 @@
 void main()
 {
 	ONIReader reader;
+	double percent_complete = 0;
 	reader.ReadONI("D:\\Data for Development\\ONI\\131.oni");
 	FeatureExtractor feature_manager;
 	feature_manager.ReceiveONIReader_n_Process(reader.depth_user_frames_, reader.skeletons_, reader.user_tracked_, reader.frame_no_);

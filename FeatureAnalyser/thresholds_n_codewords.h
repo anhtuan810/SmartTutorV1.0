@@ -7,8 +7,8 @@
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
 
-#ifndef THRESHOLDS_H_
-#define THRESHOLDS_H_
+#ifndef THRESHOLDS_N_CODEWORDS_H_
+#define THRESHOLDS_N_CODEWORDS_H_
 
 #include <tuple>
 
@@ -41,7 +41,7 @@ enum Codewords
 class Thresholds
 {
 public:
-	const int kCodewordsNo = 14;
+	int kCodewordsNo;
 	Thresholds();
 	~Thresholds();
 	std::pair<double, double> GetThresholds(Codewords codeword);

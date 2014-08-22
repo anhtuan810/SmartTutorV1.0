@@ -100,6 +100,7 @@
     <Compile Include="Progress\ucProgress.xaml.cs">
       <DependentUpon>ucProgress.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RequiredInterface\GUIFeatureInterface.cs" />
     <Compile Include="RequiredInterface\GUIRecorderInterface.cs" />
     <Compile Include="Results\ucBriefResults.xaml.cs">
       <DependentUpon>ucBriefResults.xaml</DependentUpon>

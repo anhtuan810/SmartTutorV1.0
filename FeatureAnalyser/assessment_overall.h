@@ -31,13 +31,13 @@ public:
 	double GetCodewordPercentage(Codewords codeword);
 protected:
 private:
-	double score_overall_ = 0;
-	double score_contraction_ = 0;
-	double score_direction_ = 0;
-	double score_displacement_ = 0;
-	double score_energy_ = 0;
-	double score_impulse_ = 0;
-	double score_stability_ = 0;
+	double score_overall_;
+	double score_contraction_;
+	double score_direction_;
+	double score_displacement_;
+	double score_energy_;
+	double score_impulse_;
+	double score_stability_;
 	ThresholdingResult thresholding_result_;
 
 

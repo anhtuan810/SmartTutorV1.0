@@ -50,7 +50,7 @@ double AssessmentOverall::GetScore_Overarll() { return score_overall_; }
 void AssessmentOverall::GetPercentage()
 {
 	const int kCodewordNo = 14;
-	for (int i = 0; i <= kCodewordNo; ++i)
+	for (int i = 0; i < kCodewordNo; ++i)
 	{
 		double percentage = GetPercentage_OneBinary(thresholding_result_.GetCodewordBinary(Codewords(i)));
 		percentage_codewords_.push_back(percentage);

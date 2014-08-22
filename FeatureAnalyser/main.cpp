@@ -15,13 +15,7 @@
 void main()
 {
 	FeatureAnalyser feature_analyser;
-	feature_analyser.ReadFeatures_FromFiles(
-		"C:\\contraction.txt",
-		"C:\\stability.txt",
-		"C:\\energy.txt",
-		"C:\\direction.txt",
-		"C:\\impulse.txt",
-		"C:\\displacement.txt");
+	feature_analyser.ReadFeatures_FromFiles("C:\\");
 
 	Thresholds thresholds;
 	ThresholdingResult thresholding_result = feature_analyser.ApplyThreshold(thresholds);

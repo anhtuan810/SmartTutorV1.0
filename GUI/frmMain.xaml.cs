@@ -28,7 +28,14 @@ namespace GUI
 		public frmMain()
 		{
 			this.InitializeComponent();
-			
+
+
+            RequiredInterface.GUIFeatureInterface feature_interface = new RequiredInterface.GUIFeatureInterface();
+            //feature_interface.GenerateFeaturesFromONI("D:\\Data for Development\\ONI\\131.oni", "D:\\");
+            feature_interface.PerformFeatureAnalysis("C:\\");
+            double[] scores = feature_interface.GetScores();
+
+
 			// Insert code required on object creation below this point.
             SwitchWindow(ContentInMainForm.Home);
 		}

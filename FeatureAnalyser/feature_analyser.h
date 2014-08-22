@@ -12,6 +12,7 @@
 #define FEATURE_ANALYSER_H_
 
 #include <vector>
+#include <string>
 #include "thresholds_n_codewords.h"
 #include "thresholding_result.h"
 
@@ -31,13 +32,7 @@ public:
 		std::vector<double> &feature_displacement);
 
 	// Read features from *.txt files that are generated from FeatureExtractor module
-	void ReadFeatures_FromFiles(
-		char* file_contraction,
-		char* file_stability,
-		char* file_energy,
-		char* file_direction,
-		char* file_impulse,
-		char* file_displacement);
+	void ReadFeatures_FromFiles(std::string data_folder);
 
 	// Thresholding the whole feature values
 	ThresholdingResult ApplyThreshold(Thresholds &threshold);
@@ -51,7 +46,7 @@ private:
 	std::vector<double> feature_displacement_;
 
 	// Private, read one single feature file
-	std::vector<double> Read_One_File(char* file_name);
+	std::vector<double> Read_One_File(std::string file_name);
 	std::vector<bool> Threshold_One_Feature(std::pair<double, double> &thres, std::vector<double> &feature);
 };
 

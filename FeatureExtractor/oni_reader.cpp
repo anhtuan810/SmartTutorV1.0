@@ -21,13 +21,6 @@ ONIReader::ONIReader(){}
 ONIReader::~ONIReader(){}
 
 
-//************************************
-// Method:    InitiateOrDie
-// FullName:  ONIReader::InitiateOrDie
-// Access:    private 
-// Returns:   bool
-// Qualifier:
-//************************************
 bool ONIReader::InitiateOrDie()
 {
 	openni::Status openni_status = OpenNI::initialize();
@@ -60,14 +53,6 @@ bool ONIReader::InitiateOrDie()
 }
 
 
-//************************************
-// Method:    ReadONI
-// FullName:  ONIReader::ReadONI
-// Access:    public 
-// Returns:   bool
-// Qualifier:
-// Parameter: char * file_name
-//************************************
 bool ONIReader::ReadONI(char* file_name)
 {
 	file_name_ = file_name;
@@ -79,9 +64,7 @@ bool ONIReader::ReadONI(char* file_name)
 	const int kWidth = 640;
 
 	for (size_t i = 0; i < frame_no_; i++)
-	{		
-		cout << i << "\n";
-
+	{
 		playback_->seek(depth_stream_, i);
 		VideoFrameRef depth_frame;
 		UserTrackerFrameRef user_frame;
