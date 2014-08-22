@@ -119,6 +119,7 @@
     <Compile Include="Results\usOneFeature.xaml.cs">
       <DependentUpon>usOneFeature.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Shared\Constants.cs" />
     <Page Include="frmMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -202,6 +203,16 @@
     <Resource Include="Home\dot-types-wide.gif" />
     <Resource Include="Home\guestpresenter.jpg" />
     <Resource Include="Home\progress.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterfaceForGUI\InterfaceForGUI.vcxproj">
+      <Project>{e100a492-8dd1-4bdb-b54a-5994d89ee524}</Project>
+      <Name>InterfaceForGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RecorderAVI\RecorderAVI.csproj">
+      <Project>{2735452f-5052-42ba-bb26-2cbfb60c7c97}</Project>
+      <Name>RecorderAVI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

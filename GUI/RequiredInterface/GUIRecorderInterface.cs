@@ -16,6 +16,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows;
+using RecorderAVI;
 
 namespace GUI.RequiredInterface
 {
@@ -60,7 +61,7 @@ namespace GUI.RequiredInterface
             IStopRecordingONI();
         }
 
-        public WriteableBitmap GrabFrame()
+        public WriteableBitmap GrabFrameKinect()
         {
             const int kHeight = 480;
             const int kWidth = 640;
@@ -70,12 +71,35 @@ namespace GUI.RequiredInterface
             byte[] buffer = new byte[kHeight * kWidth * 3];
             Marshal.Copy(data, buffer, 0, buffer.Length);
 
-            // Create colour image out of data
+            // Create color image out of data
 
             WriteableBitmap bitmap = new WriteableBitmap(kWidth, kHeight, 96.0, 96.0, PixelFormats.Rgb24, null);
             bitmap.WritePixels(new Int32Rect(0, 0, kWidth, kHeight), buffer, kWidth * 3, 0);
 
             return bitmap;
         }
+
+
+
+
+        // -------------------------- WEBCAM ----------------------------------------------------------------------------
+        private SensorWebcam sensor_webcam;
+        public bool TurnOn_StartRecording_Webcam(int video_id, int audio_id, string file_name)
+        {
+            sensor_webcam = new SensorWebcam(video_id, audio_id);
+            return sensor_webcam.StartRecordingOrDie(file_name);
+        }
+
+
+        public void StopRecording_Webcam()
+        {
+            sensor_webcam.StopRecording();
+        }
+
+        public void TurnOffWebcam()
+        {
+            sensor_webcam.TurnOff();
+        }
+
     }
 }

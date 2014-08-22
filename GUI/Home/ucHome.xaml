@@ -8,13 +8,13 @@
 	mc:Ignorable="d"
 	x:Class="GUI.ucHome"
 	x:Name="UserControl"
-	d:DesignWidth="871" d:DesignHeight="640" Width="1600" Height="900">
+	d:DesignWidth="871" d:DesignHeight="640" Width="Auto" Height="Auto">
 
 	<Grid x:Name="LayoutRoot">
 		<Grid Height="251.5" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="609.5">
-			<k:KinectTileButton x:Name="btnPractice" Content="PRACTICE" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="250" Height="250"/>
+			<k:KinectTileButton x:Name="btnPractice" Content="PRACTICE" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="250" Height="250" Click="btnPractice_Click"/>
 			<k:KinectTileButton x:Name="btnProgress" Content="PROGRESS" HorizontalAlignment="Left" Margin="359.5,0,0,0" VerticalAlignment="Top" Foreground="White" Width="250" Height="250"/>
 		</Grid>
-		<local:ucTitle Margin="0,10,0,0" VerticalAlignment="Top" Width="1600"/>
+		<local:ucTitle Margin="0,10,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
 	</Grid>
 </UserControl>

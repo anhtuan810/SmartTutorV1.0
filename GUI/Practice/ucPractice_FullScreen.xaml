@@ -6,15 +6,15 @@
 	xmlns:k="http://schemas.microsoft.com/kinect/2013"
 	mc:Ignorable="d"
 	x:Class="GUI.ucPractice_FullScreen"
-	x:Name="UserControl" Height="898" Width="1600">
+	x:Name="UserControl">
 
 	<Grid x:Name="LayoutRoot">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
-		<Image x:Name="imgUser" Margin="0" OpacityMask="Black"/>
+		<Image x:Name="imgKinect" Margin="0" OpacityMask="Black"/>
 		<Grid Height="42" Margin="0" VerticalAlignment="Bottom" Background="Black" Opacity="0.4">
-			<Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFF8F8" FontSize="24"/>
+			<Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFF8F8" FontSize="24" MouseDown="lblTime_MouseDown"/>
 		</Grid>
 	</Grid>
 </UserControl>

@@ -29,7 +29,7 @@ namespace RecorderAVI
         public SensorWebcam(int video_id, int audio_id)
         {
             filters_ = new Filters();
-            capture_ = new Capture(filters_.VideoInputDevices[video_id], filters_.AudioInputDevices[audio_id]);
+            capture_ = new Capture(filters_.VideoInputDevices[video_id], filters_.AudioInputDevices[audio_id]);            
         }
 
         /// <summary>
@@ -68,6 +68,8 @@ namespace RecorderAVI
 
         public bool StartRecordingOrDie(string file_name)
         {
+            capture_.VideoCompressor = filters_.VideoCompressors[0];
+            capture_.AudioCompressor = filters_.AudioCompressors[0];
             capture_.Filename = file_name;
             capture_.Start();
             return true;
@@ -76,13 +78,6 @@ namespace RecorderAVI
         public void StopRecording()
         {
             capture_.Stop();
-        }
-
-        public char[] GrabFrame()
-        {
-            char[] data = new char[640 * 480 * 3];
-            
-            return data;
         }
     }
 }

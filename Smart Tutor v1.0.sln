@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modelling", "Modelling\Modelling.modelproj", "{6E9CE534-4CCD-42E2-B6A8-9721F360C3EF}"
 EndProject
@@ -72,6 +72,7 @@ Global
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Debug|Win32.ActiveCfg = Debug|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5EF9695C-376D-4D27-A535-216041EF8CED}.Debug|x64.Build.0 = Debug|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EF9695C-376D-4D27-A535-216041EF8CED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
@@ -109,7 +110,6 @@ Global
 		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Debug|Win32.Build.0 = Debug|Win32
 		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Debug|x64.ActiveCfg = Debug|x64
-		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Debug|x64.Build.0 = Debug|x64
 		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Release|Any CPU.ActiveCfg = Release|Win32
 		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Release|Mixed Platforms.ActiveCfg = Release|Win32
 		{92C664C8-C086-4B95-B022-FF5737EBE47B}.Release|Mixed Platforms.Build.0 = Release|Win32
