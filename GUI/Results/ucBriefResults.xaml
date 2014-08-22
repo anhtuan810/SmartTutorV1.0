@@ -31,10 +31,22 @@
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="20"/>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
+					<ColumnDefinition Width="49*"/>
+					<ColumnDefinition Width="101*"/>
 					<ColumnDefinition Width="20"/>
 				</Grid.ColumnDefinitions>
+				<Label Content="Overall Score&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="26.667" Height="49.157" Width="165.21"/>
+				<Label Content="9.5&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Center" Margin="0,94,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="61.333" Height="96.373" Width="89.423"/>
+				<Grid Grid.Column="2" Margin="0" Grid.Row="1">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+				</Grid>
 			</Grid>
 		</Grid>
 		<Grid x:Name="Features" Grid.Column="1" Margin="0" Grid.Row="1">

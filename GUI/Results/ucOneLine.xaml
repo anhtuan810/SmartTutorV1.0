@@ -1,0 +1,17 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="GUI.ucOneLine"
+	x:Name="UserControl"
+	d:DesignWidth="640" Height="45">
+
+	<Grid x:Name="LayoutRoot">
+		<Path Data="M0,47 L544.00216,47" Fill="#FF8C8CA4" Height="1" Margin="0" Stretch="Fill" Stroke="#FFBF9A9A" VerticalAlignment="Center"/>
+		<Rectangle Fill="#FF1B777C" HorizontalAlignment="Left" Height="10.533" Margin="123,0,0,0" Stroke="#FFBF9A9A" VerticalAlignment="Center" Width="73" StrokeThickness="0"/>
+		<Rectangle Fill="#FF1B777C" HorizontalAlignment="Left" Height="10.532" Margin="267,17.234,0,17.234" Stroke="#FFBF9A9A" VerticalAlignment="Center" Width="178" StrokeThickness="0"/>
+		<Rectangle Fill="#FF1B777C" HorizontalAlignment="Left" Height="10.532" Margin="518,17.234,0,17.234" Stroke="#FFBF9A9A" VerticalAlignment="Center" Width="8" StrokeThickness="0"/>
+	</Grid>
+</UserControl>

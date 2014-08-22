@@ -113,6 +113,9 @@
     <Compile Include="Results\ucOneFeature.xaml.cs">
       <DependentUpon>ucOneFeature.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Results\ucOneLine.xaml.cs">
+      <DependentUpon>ucOneLine.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Results\usOneFeature.xaml.cs">
       <DependentUpon>usOneFeature.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Results\ucOneLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Results\usOneFeature.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -192,6 +199,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Home\dot-types-wide.gif" />
     <Resource Include="Home\guestpresenter.jpg" />
     <Resource Include="Home\progress.jpg" />
   </ItemGroup>
