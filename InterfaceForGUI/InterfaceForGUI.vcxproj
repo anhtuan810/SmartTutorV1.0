@@ -116,11 +116,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="feature_interface.h" />
     <ClInclude Include="recorder_interface.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="feature_interface.cpp" />
     <ClCompile Include="recorder_interface.cpp" />
   </ItemGroup>
   <ItemGroup>

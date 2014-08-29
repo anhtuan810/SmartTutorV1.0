@@ -14,15 +14,9 @@
     <ClInclude Include="recorder_interface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="feature_interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="recorder_interface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="feature_interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
