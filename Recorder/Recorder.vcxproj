@@ -72,8 +72,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OPENNI2_LIB64);$(NITE2_LIB64);$(OPEN_CV)build\x64\vc10\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;opencv_highgui249.lib;opencv_core249.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENNI2_LIB64); $(NITE2_LIB64); C:\opencv\build\x64\vc10\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;opencv_highgui248.lib;opencv_core248.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
