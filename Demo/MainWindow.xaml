@@ -1,0 +1,143 @@
+﻿<Window x:Class="Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Smart Tutor V1.0" Width="1920" Height="1080" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="499*"/>
+            <RowDefinition Height="551*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1292"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement x:Name="media" HorizontalAlignment="Left" Height="480" Margin="10,9,0,0" VerticalAlignment="Top" Width="640" Source="C:\Users\Anh Tuan\Desktop\S3_P4_1.avi" Grid.ColumnSpan="2" LoadedBehavior="Manual" UnloadedBehavior="Manual" MouseDown="media_MouseDown"/>
+        <Grid x:Name="grdFrame" Margin="10,10,10,20" Grid.Column="1" Grid.RowSpan="2" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="235"/>
+                <ColumnDefinition Width="1037"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="39*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="1" Stretch="Fill" Stroke="Black" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="2" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="3" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="5" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="6" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="8" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="9" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="10" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="11" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="13" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="14" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="15" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="17" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="18" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="20" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="21" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Rectangle x:Name="rtgTrack1" Fill="#FFF1E4E4" HorizontalAlignment="Left" Height="1020" Grid.RowSpan="24" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="235" OpacityMask="Black" Opacity="0.5" Grid.ColumnSpan="2"/>
+            <Path Grid.Column="1" Data="M240.62687,64 L1248.1358,64" Fill="#FFF0E7E4" Height="1" Margin="0" Grid.Row="22" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Opacity="0.5"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="803,13,0,10" Grid.Row="1" Stroke="Black" VerticalAlignment="Center" Width="19" StrokeThickness="0"/>
+            <Label Content="Stability" FontSize="22" Margin="10,15,49.5,4" VerticalContentAlignment="Center"/>
+            <Label Content="Balanced" FontSize="20" Margin="54,0,18.5,0" Grid.Row="1" VerticalContentAlignment="Center"/>
+            <Label Content="Lean to the right" FontSize="20" Margin="54,0,18.5,0" Grid.Row="2" VerticalContentAlignment="Center"/>
+            <Label Content="Lean to the left" FontSize="20" Margin="54,0,49,0" Grid.Row="3" VerticalContentAlignment="Center"/>
+            <Label Content="Openness" FontSize="22" Margin="10,15,19,0" Grid.Row="4" VerticalContentAlignment="Center"/>
+            <Label Content="Openned" FontSize="20" Margin="54,0,0,0" Grid.Row="5" VerticalContentAlignment="Center"/>
+            <Label Content="Closed" FontSize="20" Margin="54,0,0,0" Grid.Row="6" VerticalContentAlignment="Center"/>
+            <Label Content="Energy" FontSize="22" Margin="10,15,0,0" Grid.Row="7" VerticalContentAlignment="Center"/>
+            <Label Content="Average" FontSize="20" Margin="54,0,0,0" Grid.Row="8" VerticalContentAlignment="Center"/>
+            <Label Content="High" FontSize="20" Margin="54,0,0,0" Grid.Row="9" VerticalContentAlignment="Center"/>
+            <Label Content="Low" FontSize="20" Margin="54,0,0,0" Grid.Row="10" VerticalContentAlignment="Center"/>
+            <Label Content="High impulse" FontSize="20" Margin="54,0,0,0" Grid.Row="11" VerticalContentAlignment="Center"/>
+            <Label Content="Global movement" FontSize="22" Margin="10,15,0,0" Grid.Row="12" VerticalContentAlignment="Center"/>
+            <Label Content="Average" FontSize="20" Margin="54,0,0,0" Grid.Row="13" VerticalContentAlignment="Center"/>
+            <Label Content="High" FontSize="20" Margin="54,0,0,0" Grid.Row="14" VerticalContentAlignment="Center"/>
+            <Label Content="Low" FontSize="20" Margin="54,0,0,0" Grid.Row="15" VerticalContentAlignment="Center"/>
+            <Label Content="Direction" FontSize="22" Margin="10,15,0,0" Grid.Row="16" VerticalContentAlignment="Center"/>
+            <Label Content="Forward" FontSize="20" Margin="54,0,0,0" Grid.Row="17" VerticalContentAlignment="Center"/>
+            <Label Content="Backward" FontSize="20" Margin="54,0,0,0" Grid.Row="18" VerticalContentAlignment="Center"/>
+            <Label Content="Hand gestures" FontSize="22" Margin="10,15,0,0" Grid.Row="19" VerticalContentAlignment="Center"/>
+            <Label Content="Suitable amount" FontSize="20" Margin="54,0,0,0" Grid.Row="20" VerticalContentAlignment="Center"/>
+            <Label Content="Too much" FontSize="20" Margin="54,1,0,1" Grid.Row="21" VerticalContentAlignment="Center"/>
+            <Label Content="Too little" FontSize="20" Margin="54,0,0,0" Grid.Row="22" VerticalContentAlignment="Center"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="0,12,0,10" Grid.Row="3" Stroke="Black" VerticalAlignment="Center" Width="797" StrokeThickness="0"/>
+            <Rectangle x:Name="rtgTrack" Fill="#FFF1E4E4" HorizontalAlignment="Left" Height="1020" Grid.RowSpan="24" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="235" OpacityMask="Black" Opacity="0.5" Grid.Column="1"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="843,10,0,10" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="194" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="17" Margin="103,0,0,0" Grid.Row="15" Stroke="Black" VerticalAlignment="Center" Width="934" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="964,11.246,0,9.754" Grid.Row="5" Stroke="Black" VerticalAlignment="Center" Width="73" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="745,0,0,0" Grid.Row="6" Stroke="Black" VerticalAlignment="Center" Width="139" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="6" Stroke="Black" VerticalAlignment="Center" Width="123" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="222,0,0,0" Grid.Row="6" Stroke="Black" VerticalAlignment="Center" Width="426" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="935,0,0,0" Grid.Row="9" Stroke="Black" VerticalAlignment="Center" Width="102" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="893,0,0,0" Grid.Row="11" Stroke="Black" VerticalAlignment="Center" Width="26" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="983,9.953,0,10.047" Grid.Row="11" Stroke="Black" VerticalAlignment="Center" Width="54" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="0,11.713,0,10.287" Grid.Row="8" Stroke="Black" VerticalAlignment="Center" Width="475" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="475,0,0,0" Grid.Row="10" Stroke="Black" VerticalAlignment="Center" Width="196" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="670,0,0,0" Grid.Row="8" Stroke="Black" VerticalAlignment="Center" Width="264" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="715,0,0,0" Grid.Row="20" Stroke="Black" VerticalAlignment="Center" Width="322" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="0,13.12,0,9.64" Grid.Row="22" Stroke="Black" VerticalAlignment="Center" Width="341" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="341,0,0,0" Grid.Row="20" Stroke="Black" VerticalAlignment="Center" Width="160" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="Red" HorizontalAlignment="Left" Height="15" Margin="501,0,0,0" Grid.Row="22" Stroke="Black" VerticalAlignment="Center" Width="218" StrokeThickness="0"/>
+        </Grid>
+        <Grid Grid.Row="1" Margin="10,5,10,20" Background="#FFF1E4E4" OpacityMask="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Score" FontSize="28" Margin="0" MouseDown="Label_MouseDown"/>
+            <Label Content="Overall" Margin="30,0,464,0" Grid.Row="1" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Label Content="Stability" Margin="30,0,464,0" Grid.Row="2" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Label Content="Openness" Margin="30,0,419,1" Grid.Row="3" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Label Content="Energy" Margin="30,0,464,0" Grid.Row="4" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Label Content="Movement" Margin="30,0,386,1" Grid.Row="5" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Label Content="Direction" Margin="30,4,386,-4" Grid.Row="6" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Label Content="Hand gestures" Margin="30,0,386,-1" Grid.Row="7" RenderTransformOrigin="-2.158,-1.462" FontSize="22" VerticalContentAlignment="Center"/>
+            <Rectangle Fill="#FF957B77" HorizontalAlignment="Left" Height="45" Margin="214,19,0,19" Grid.Row="7" Stroke="Black" VerticalAlignment="Center" Width="258" StrokeThickness="0"/>
+            <Rectangle Fill="#FF957B77" HorizontalAlignment="Left" Height="45" Margin="214,19,0,19" Grid.Row="6" Stroke="Black" VerticalAlignment="Center" Width="166" StrokeThickness="0"/>
+            <Rectangle Fill="#FF957B77" HorizontalAlignment="Left" Height="45" Margin="214,19,0,19" Grid.Row="5" Stroke="Black" VerticalAlignment="Center" Width="166" StrokeThickness="0"/>
+            <Rectangle Fill="#FF957B77" HorizontalAlignment="Left" Height="45" Margin="214,20,0,20" Grid.Row="4" Stroke="Black" VerticalAlignment="Center" Width="278" StrokeThickness="0"/>
+            <Rectangle Fill="#FF957B77" HorizontalAlignment="Left" Height="45" Margin="214,20,0,20" Grid.Row="3" Stroke="Black" VerticalAlignment="Center" Width="202" StrokeThickness="0"/>
+            <Rectangle Fill="#FF957B77" HorizontalAlignment="Left" Height="45" Margin="214,20,0,20" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="138" StrokeThickness="0"/>
+            <Rectangle Fill="#FFFF0505" HorizontalAlignment="Left" Height="45" Margin="214,20,0,20" Grid.Row="1" Stroke="Black" VerticalAlignment="Center" Width="202" StrokeThickness="0"/>
+            <Label Content="6.5" HorizontalAlignment="Right" Margin="0,12,189,12" Grid.Row="1" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+            <Label Content="4.5" HorizontalAlignment="Right" Margin="0,13,252,11" Grid.Row="2" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+            <Label Content="6.5" HorizontalAlignment="Right" Margin="0,12,189,12" Grid.Row="3" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+            <Label Content="8.0" HorizontalAlignment="Right" Margin="0,13,112,11" Grid.Row="4" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+            <Label Content="5.0" HorizontalAlignment="Right" Margin="0,12,224,12" Grid.Row="5" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+            <Label Content="5.0" HorizontalAlignment="Right" Margin="0,12,224,12" Grid.Row="6" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+            <Label Content="7.5" HorizontalAlignment="Right" Margin="0,12,128,12" Grid.Row="7" FontSize="22" Height="42" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+        </Grid>
+
+    </Grid>
+</Window>
