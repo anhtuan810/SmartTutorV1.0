@@ -9,7 +9,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
 namespace GUI
 {
     public enum ContentInMainForm
@@ -36,6 +35,10 @@ namespace GUI
             feature_interface.SaveResultData("D:\\");
             
             //double[] scores = feature_interface.GetScores();
+
+            GUI.IO.ResultReader result_reader = new IO.ResultReader();
+            GUI.IO.Result result = result_reader.ReadData("D:\\");
+
 
 
 			// Insert code required on object creation below this point.

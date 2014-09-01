@@ -91,6 +91,7 @@
     <Compile Include="Home\ucTitle.xaml.cs">
       <DependentUpon>ucTitle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IO\ResultReader.cs" />
     <Compile Include="Practice\ucPractice_FullScreen.xaml.cs">
       <DependentUpon>ucPractice_FullScreen.xaml</DependentUpon>
     </Compile>

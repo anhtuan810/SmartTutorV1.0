@@ -179,7 +179,7 @@ std::vector<bool> AssessmentOverall::GetCodewordBinary(Codewords codeword)
 
 void AssessmentOverall::SaveResultToHDD(std::string data_folder)
 {
-	SaveAllScore(data_folder + "score_overall.txt");
+	SaveAllScore(data_folder + "scores.txt");
 
 	SaveOneCodewordBinary(GetCodewordBinary(Codewords::CONTRACTION_HIGH), data_folder + "binary_contraction_high.txt");
 	SaveOneCodewordBinary(GetCodewordBinary(Codewords::CONTRACTION_AVERAGE), data_folder + "binary_contraction_average.txt");
