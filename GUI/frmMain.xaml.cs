@@ -19,7 +19,7 @@ namespace GUI
         Practice_FullScreen,
         Result
     }
-
+    
 	/// <summary>
 	/// Interaction logic for frmMain.xaml
 	/// </summary>
@@ -33,6 +33,8 @@ namespace GUI
             RequiredInterface.GUIFeatureInterface feature_interface = new RequiredInterface.GUIFeatureInterface();
             //feature_interface.GenerateFeaturesFromONI("D:\\Data for Development\\ONI\\131.oni", "D:\\");
             feature_interface.PerformFeatureAnalysis("C:\\");
+            feature_interface.SaveResultData("D:\\");
+            
             //double[] scores = feature_interface.GetScores();
 
 

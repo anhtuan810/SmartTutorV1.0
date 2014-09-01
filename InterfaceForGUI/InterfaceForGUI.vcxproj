@@ -116,10 +116,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="recorder_interface.h" />
+    <ClInclude Include="lib_for_gui.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="recorder_interface.cpp" />
+    <ClCompile Include="lib_for_gui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FeatureAnalyser\FeatureAnalyser.vcxproj">

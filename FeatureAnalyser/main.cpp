@@ -21,8 +21,6 @@ void main()
 	ThresholdingResult thresholding_result = feature_analyser.ApplyThreshold(thresholds);
 	AssessmentOverall assessment;
 	assessment.PerformAssessment(thresholding_result);
-	double a = assessment.GetScore_Contraction();
-	double b = assessment.GetScore_Stability();
-	double c = assessment.GetScore_Overarll();
+	assessment.SaveResultToHDD("D:\\");
 
 }

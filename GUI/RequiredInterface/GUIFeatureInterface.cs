@@ -16,8 +16,7 @@ namespace GUI.RequiredInterface
         public static extern void IPerformFeatureAnalysis(string data_folder);
 
         [DllImport(@"InterfaceForGUI.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern IntPtr IGetFeatureScores();
-
+        public static extern void ISaveAnalysisResult(string result_folder);
 
 
         public bool GenerateFeaturesFromONI(string oni_file, string data_folder)
@@ -30,12 +29,9 @@ namespace GUI.RequiredInterface
             IPerformFeatureAnalysis(data_folder);
         }
 
-        public double[] GetScores()
+        public void SaveResultData(string result_folder)
         {
-            IntPtr scores = IGetFeatureScores();
-            double[] result = new double[7];
-            Marshal.Copy(scores, result, 0, 7);
-            return result;
+            ISaveAnalysisResult(result_folder);
         }
     }
 }

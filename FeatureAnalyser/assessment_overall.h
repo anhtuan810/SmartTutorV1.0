@@ -11,6 +11,7 @@
 #define ASSESSMENT_OVERALL_H_
 
 #include "thresholding_result.h"
+#include <string>
 
 class AssessmentOverall
 {
@@ -27,8 +28,12 @@ public:
 
 	// The major functions
 	void PerformAssessment(ThresholdingResult &thresholding_result);
-	// Assess result after performed
-	double GetCodewordPercentage(Codewords codeword);
+
+	// Save result to HDD for permanent storage and GUI GUI
+	void SaveResultToHDD(std::string data_folder);
+
+	
+	
 protected:
 private:
 	double score_overall_;
@@ -43,6 +48,8 @@ private:
 
 	//-------------------------------------- PERCENTAGE ---------------------------------------------------
 	// The percentage of codewords, number of component = number of codewords
+	// Assess result after performed
+	double GetCodewordPercentage(Codewords codeword);
 	std::vector<double> percentage_codewords_;
 	// private, Get the percentage of codewords in the same category
 	void GetPercentage();
@@ -61,6 +68,12 @@ private:
 	void ScoreStability();
 	// private, The overall score from scores of features
 	void ScoreOverall();
+
+
+	//--------------------------------------- SAVE DATA -----------------------------------------------------
+	void SaveAllScore(std::string file_name);
+	std::vector<bool> GetCodewordBinary(Codewords codeword);
+	void SaveOneCodewordBinary(std::vector<bool> &binary_data, std::string file_name);
 };
 
 #endif

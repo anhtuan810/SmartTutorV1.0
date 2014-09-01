@@ -76,7 +76,7 @@ namespace GUI.RequiredInterface
             WriteableBitmap bitmap = new WriteableBitmap(kWidth, kHeight, 96.0, 96.0, PixelFormats.Rgb24, null);
             bitmap.WritePixels(new Int32Rect(0, 0, kWidth, kHeight), buffer, kWidth * 3, 0);
 
-            return bitmap;
+            return bitmap;  
         }
 
 

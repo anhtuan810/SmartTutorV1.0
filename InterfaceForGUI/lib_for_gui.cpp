@@ -7,7 +7,7 @@
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
 
-#include "recorder_interface.h"
+#include "lib_for_gui.h"
 #include "sensor_kinect.h"
 #include <string>
 #include "oni_reader.h"
@@ -63,21 +63,13 @@ bool IGenerateFeaturesFromONI(char* ONI_file_name, char* data_folder)
 
 void IPerformFeatureAnalysis(char* data_folder)
 {
-	//feature_analyser_.ReadFeatures_FromFiles(data_folder);
-	//Thresholds threshold;
-	//ThresholdingResult thresholding_result = feature_analyser_.ApplyThreshold(threshold);
-	//scorer_.PerformAssessment(thresholding_result);
+	feature_analyser_.ReadFeatures_FromFiles(data_folder);
+	Thresholds threshold;
+	ThresholdingResult thresholding_result = feature_analyser_.ApplyThreshold(threshold);
+	scorer_.PerformAssessment(thresholding_result);
 }
 
-double* IGetFeatureScores()
+void ISaveAnalysisResult(char* result_folder)
 {
-	double scores[7] = { 0, 0, 0, 0, 0, 0, 0 };
-	scores[0] = scorer_.GetScore_Contraction();
-	scores[1] = scorer_.GetScore_Direction();
-	scores[2] = scorer_.GetScore_Displacement();
-	scores[3] = scorer_.GetScore_Energy();
-	scores[4] = scorer_.GetScore_Impulse();
-	scores[5] = scorer_.GetScore_Stability();
-	scores[6] = scorer_.GetScore_Overarll();
-	return scores;
+	scorer_.SaveResultToHDD(result_folder);
 }

@@ -10,6 +10,7 @@
 #include "assessment_overall.h"
 #include "thresholds_n_codewords.h"
 #include <math.h>
+#include <fstream>
 
 AssessmentOverall::AssessmentOverall(){}
 AssessmentOverall::~AssessmentOverall(){}
@@ -163,4 +164,72 @@ void AssessmentOverall::ScoreOverall()
 	score_overall_ = score;
 }
 
+
+std::vector<bool> AssessmentOverall::GetCodewordBinary(Codewords codeword)
+{
+	return thresholding_result_.GetCodewordBinary(codeword);
+}
+
 #pragma endregion
+
+
+
+// ------------------------ SAVE RESULT ----------------------------------------------------------------------------
+#pragma region Save result to HDD
+
+void AssessmentOverall::SaveResultToHDD(std::string data_folder)
+{
+	SaveAllScore(data_folder + "score_overall.txt");
+
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::CONTRACTION_HIGH), data_folder + "binary_contraction_high.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::CONTRACTION_AVERAGE), data_folder + "binary_contraction_average.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::CONTRACTION_LOW), data_folder + "binary_contraction_low.txt");
+
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::DIRECTION_BACKWARD), data_folder + "binary_direction_backward.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::DIRECTION_FORWARD), data_folder + "binary_direction_forward.txt");
+
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::DISPLACEMENT_MOVING), data_folder + "binary_displacement_moving.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::DISPLACEMENT_MOVING), data_folder + "binary_displacement_not_moving.txt");
+
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::ENERGY_HIGH), data_folder + "binary_energy_high.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::ENERGY_AVERAGE), data_folder + "binary_energy_average.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::ENERGY_LOW), data_folder + "binary_energy_low.txt");
+
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::IMPULSE), data_folder + "binary_impulse.txt");
+
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::STABILITY_LEAN_LEFT), data_folder + "binary_lean_left.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::STABILITY_LEAN_RIGHT), data_folder + "binary_lean_right.txt");
+	SaveOneCodewordBinary(GetCodewordBinary(Codewords::STABILITY_BALANCED), data_folder + "binary_balanced.txt");
+}
+
+
+void AssessmentOverall::SaveAllScore(std::string file_name)
+{
+	std::ofstream writer(file_name);
+	writer << score_overall_ << "\n";
+	writer << score_contraction_ << "\n";
+	writer << score_direction_ << "\n";
+	writer << score_displacement_ << "\n";
+	writer << score_energy_ << "\n";
+	writer << score_impulse_ << "\n";
+	writer << score_stability_ << "\n";
+	writer.close();
+}
+
+
+void AssessmentOverall::SaveOneCodewordBinary(std::vector<bool> &binary_data, std::string file_name)
+{
+	std::ofstream writer(file_name);
+	for (size_t i = 0; i < binary_data.size(); i++)
+	{
+		if (binary_data[i])
+			writer << "1" << "\n";
+		else
+			writer << "0" << "\n";
+	}
+	writer.close();
+}
+
+#pragma endregion
+
+
