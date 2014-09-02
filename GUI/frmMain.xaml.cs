@@ -29,20 +29,17 @@ namespace GUI
 			this.InitializeComponent();
 
 
-            RequiredInterface.GUIFeatureInterface feature_interface = new RequiredInterface.GUIFeatureInterface();
+            //RequiredInterface.GUIFeatureInterface feature_interface = new RequiredInterface.GUIFeatureInterface();
             //feature_interface.GenerateFeaturesFromONI("D:\\Data for Development\\ONI\\131.oni", "D:\\");
-            feature_interface.PerformFeatureAnalysis("C:\\");
-            feature_interface.SaveResultData("D:\\");
+            //feature_interface.PerformFeatureAnalysis("C:\\");
+            //feature_interface.SaveResultData("D:\\");
             
-            //double[] scores = feature_interface.GetScores();
-
-            GUI.IO.ResultReader result_reader = new IO.ResultReader();
-            GUI.IO.Result result = result_reader.ReadData("D:\\");
-
+            //GUI.IO.ResultReader result_reader = new IO.ResultReader();
+            //GUI.IO.Result result = result_reader.ReadData("D:\\");
 
 
 			// Insert code required on object creation below this point.
-            SwitchWindow(ContentInMainForm.Home);
+            SwitchWindow(ContentInMainForm.Practice_FullScreen);
 		}
 
         public void SwitchWindow(ContentInMainForm content)

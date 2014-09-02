@@ -26,7 +26,7 @@ namespace GUI
         private void btnPractice_Click(object sender, RoutedEventArgs e)
         {
             frmMain main_form = (frmMain)((Grid)this.Parent).Parent;
-            main_form.SwitchWindow(ContentInMainForm.Practice);
+            main_form.SwitchWindow(ContentInMainForm.Practice_FullScreen);
         }
 	}
 }

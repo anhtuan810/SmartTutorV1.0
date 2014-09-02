@@ -5,7 +5,7 @@
 	x:Class="GUI.frmMain"
 	x:Name="Window"
 	Title="frmMain"
-	Width="1600" Height="900" WindowStartupLocation="CenterScreen">
+	Width="1600" Height="900" WindowStartupLocation="Manual" WindowState="Maximized">
 
     <Grid x:Name="LayoutRoot">
     </Grid>
