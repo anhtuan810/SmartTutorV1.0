@@ -18,9 +18,27 @@ namespace GUI
 	/// </summary>
 	public partial class ucTitle : UserControl
 	{
+        private string title_;
+        ContentInMainForm go_back_content_;
+
 		public ucTitle()
 		{
 			this.InitializeComponent();
 		}
+
+        public void UpdateData(string title, ContentInMainForm go_back_content)
+        {
+            title_ = title;
+            go_back_content_ = go_back_content;
+            this.lblTitle.Content = title;
+            this.btnBack.Click += btnBack_Click;
+        }
+
+        void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+ 	        frmMain frm = (frmMain)((Grid)((UserControl)((Grid)this.Parent).Parent).Parent).Parent;
+            frm.SwitchWindow(go_back_content_);
+        }
+
 	}
 }

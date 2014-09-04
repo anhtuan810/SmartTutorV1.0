@@ -33,7 +33,7 @@
 				</LinearGradientBrush>
 			</Label.Background>
 		</Label>
-		<Label Content="HOME" Grid.Column="1" Background="#FF52318F" Foreground="White" FontSize="48" FontWeight="Thin" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.ColumnSpan="2"/>
+		<Label x:Name="lblTitle" Content="HOME" Grid.Column="1" Background="#FF52318F" Foreground="White" FontSize="48" FontWeight="Thin" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.ColumnSpan="2"/>
 		<k:KinectCircleButton x:Name="btnBack" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="69.119" Width="82.56" FontSize="56" FontWeight="Normal" FontStyle="Italic" Foreground="#FFFDFDFD"/>
 	</Grid>
 </UserControl>

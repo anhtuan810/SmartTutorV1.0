@@ -39,7 +39,7 @@ namespace GUI
 
 
 			// Insert code required on object creation below this point.
-            SwitchWindow(ContentInMainForm.Practice_FullScreen);
+            SwitchWindow(ContentInMainForm.Result);
 		}
 
         public void SwitchWindow(ContentInMainForm content)

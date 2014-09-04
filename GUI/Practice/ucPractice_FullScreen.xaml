@@ -11,8 +11,9 @@
     <Grid x:Name="LayoutRoot" Background="Black">
         <Image x:Name="imgKinect" Margin="0" OpacityMask="Black"/>
         <k:KinectTileButton x:Name="btnStartRecording" Click="btnStartRecording_Click" Content="START" Foreground="White" Opacity="0.75" />
-		<Grid Height="42" Margin="0" VerticalAlignment="Bottom" Background="Black" Opacity="0.4">
-			<Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFF8F8" FontSize="24" MouseDown="lblTime_MouseDown"/>
-		</Grid>
-	</Grid>
+        <Label x:Name="lblCountDown" Content="5" FontSize="160" Foreground="#FFFBFBFB" VerticalAlignment="Center" Background="#FF52318F" Width="220" Height="220" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Grid Height="42" Margin="0" VerticalAlignment="Bottom" Background="Black" Opacity="0.4">
+            <Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFF8F8" FontSize="24" MouseDown="lblTime_MouseDown"/>
+        </Grid>
+    </Grid>
 </UserControl>

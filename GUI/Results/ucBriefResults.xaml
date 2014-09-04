@@ -6,71 +6,78 @@
 	xmlns:local="clr-namespace:GUI"
 	mc:Ignorable="d"
 	x:Class="GUI.ucBriefResults"
-	x:Name="UserControl" Height="900" Width="1600">
+	x:Name="UserControl" Height="998">
 
-	<Grid x:Name="LayoutRoot" Height="900">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="90"/>
-			<RowDefinition Height="49*"/>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="640"/>
-			<ColumnDefinition Width="100*"/>
-		</Grid.ColumnDefinitions>
-		<Grid x:Name="Overall_Playback" Margin="0" Grid.Row="1">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="480"/>
-				<RowDefinition Height="100*"/>
-			</Grid.RowDefinitions>
-			<local:ucMediaPlayer Margin="0"/>
-			<Grid x:Name="Scores" Margin="0" Grid.Row="1">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="15"/>
-					<RowDefinition/>
-					<RowDefinition Height="15"/>
-				</Grid.RowDefinitions>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="20"/>
-					<ColumnDefinition Width="49*"/>
-					<ColumnDefinition Width="101*"/>
-					<ColumnDefinition Width="20"/>
-				</Grid.ColumnDefinitions>
-				<Label Content="Overall Score&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="26.667" Height="49.157" Width="165.21"/>
-				<Label Content="9.5&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Center" Margin="0,94,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="61.333" Height="96.373" Width="89.423"/>
-				<Grid Grid.Column="2" Margin="0" Grid.Row="1">
-					<Grid.RowDefinitions>
-						<RowDefinition/>
-						<RowDefinition/>
-						<RowDefinition/>
-						<RowDefinition/>
-						<RowDefinition/>
-						<RowDefinition/>
-					</Grid.RowDefinitions>
-				</Grid>
-			</Grid>
-		</Grid>
-		<Grid x:Name="Features" Grid.Column="1" Margin="0" Grid.Row="1">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="10"/>
-				<RowDefinition/>
-				<RowDefinition/>
-				<RowDefinition Height="10"/>
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20"/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition Width="20"/>
-			</Grid.ColumnDefinitions>
-			<local:ucOneFeature Grid.Column="1" Margin="10" Grid.Row="1"/>
-			<local:ucOneFeature Grid.Column="2" Margin="10" Grid.Row="1"/>
-			<local:ucOneFeature Grid.Column="3" Margin="10" Grid.Row="1"/>
-			<local:ucOneFeature Grid.Column="1" Margin="10" Grid.Row="2"/>
-			<local:ucOneFeature Grid.Column="2" Margin="10" Grid.Row="2"/>
-			<local:ucOneFeature Grid.Column="3" Margin="10" Grid.Row="2"/>
-		</Grid>
-		<local:ucTitle Grid.ColumnSpan="2" Margin="0,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
-		<local:ucProgress HorizontalAlignment="Left" Height="100" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
-	</Grid>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <local:ucTitle x:Name="title_bar" Grid.ColumnSpan="2" Margin="0,10,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
+        <local:ucMediaPlayer x:Name="media" Padding="10" Margin="0,10,0,5" Grid.Row="1"/>
+        <Grid x:Name="grdScores" Margin="10,5,10,20" Grid.Row="2" Background="#FFF5E5E5">
+        	<Grid.RowDefinitions>
+        		<RowDefinition Height="60"/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        	</Grid.RowDefinitions>
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="145"/>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        	</Grid.ColumnDefinitions>
+        	<Label Content="Data taken: " HorizontalAlignment="Left" Margin="0" VerticalContentAlignment="Center" Grid.ColumnSpan="6" Width="620" FontSize="18.667"/>
+        	<Label Content="Overall" HorizontalAlignment="Left" Margin="10,0,0,49.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.RowSpan="2" Grid.Row="2"/>
+        	<Label Content="Contraction" HorizontalAlignment="Left" Margin="10,0.333,0,47.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="3" Grid.RowSpan="2"/>
+        	<Label Content="Direction" HorizontalAlignment="Left" Margin="10,2.333,0,49.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="4" Grid.RowSpan="2"/>
+        	<Label Content="Movement" HorizontalAlignment="Left" Margin="10,0.333,0,1.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="5"/>
+        	<Label Content="Energy" HorizontalAlignment="Left" Margin="10,2.333,0,49.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="6" Grid.RowSpan="2"/>
+        	<Label Content="Impulsivness" HorizontalAlignment="Left" Margin="10,2.333,0,-0.333" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="7"/>
+        	<Path Grid.Column="1" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Left" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
+        	<Label Content="Stability" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="8"/>
+        	<Rectangle x:Name="rtgStability" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="8" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="106" StrokeThickness="0"/>
+        	<Rectangle x:Name="rtgImpulse" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="7" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="410" StrokeThickness="0"/>
+        	<Rectangle x:Name="rtgEnergy" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="6" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="54" StrokeThickness="0"/>
+        	<Rectangle x:Name="rtgMovement" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="5" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="238" StrokeThickness="0"/>
+        	<Rectangle x:Name="rtgDirection" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="4" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="402" StrokeThickness="0"/>
+        	<Rectangle x:Name="rtgContraction" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="15" Margin="0" Grid.Row="3" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="154" StrokeThickness="0"/>
+        	<Rectangle x:Name="rtgOverall" Grid.ColumnSpan="5" Grid.Column="1" Fill="#FF767985" HorizontalAlignment="Left" Height="20" Margin="0" Grid.Row="2" Stroke="#FFBDA7A7" VerticalAlignment="Center" Width="304.5" StrokeThickness="0"/>
+        	<Path Grid.Column="2" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Left" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
+        	<Path Grid.Column="3" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Left" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
+        	<Path Grid.Column="4" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Left" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
+        	<Path Grid.Column="5" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Left" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
+        	<Path Grid.Column="5" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Right" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
+        </Grid>
+        <Grid Grid.Column="1" Margin="10,20" Grid.Row="1" Grid.RowSpan="2">
+        	<Grid.RowDefinitions>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        	</Grid.RowDefinitions>
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        	</Grid.ColumnDefinitions>
+        	<local:ucOneFeature x:Name="feature1" Margin="5,0,5,5" Height="Auto" Width="Auto"/>
+        	<local:ucOneFeature x:Name="feature2" Grid.Column="1" Margin="5,0,5,5" Width="Auto"/>
+        	<local:ucOneFeature x:Name="feature3" Grid.Column="2" Margin="5,0,5,5" Height="Auto" Width="Auto"/>
+        	<local:ucOneFeature x:Name="feature4" Margin="5,5,5,0" Height="Auto" Width="Auto" Grid.Row="1"/>
+        	<local:ucOneFeature x:Name="feature5" Grid.Column="1" Margin="5,5,5,0" Grid.Row="1" Height="Auto" Width="Auto"/>
+        	<local:ucOneFeature x:Name="feature6" Grid.Column="2" Margin="5,5,5,0" Grid.Row="1" Height="Auto" Width="Auto"/>
+        </Grid>
+    </Grid>
 </UserControl>
