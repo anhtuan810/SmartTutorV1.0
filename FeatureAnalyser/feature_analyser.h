@@ -4,6 +4,7 @@
 //	The primary class of the module, cover everything
 //
 //  Created: 2014.08.20
+//	2014.09.04: Include smoothing the binary of codewords
 //
 //  Copyright (c) 2014 Anh Tuan Nguyen. All rights reserved.
 //
@@ -36,6 +37,9 @@ public:
 
 	// Thresholding the whole feature values
 	ThresholdingResult ApplyThreshold(Thresholds &threshold);
+
+	// Smooth the data
+	void SmoothThresholdingResult(ThresholdingResult &original_result);
 protected:
 private:
 	std::vector<double> feature_contraction_;
@@ -46,8 +50,11 @@ private:
 	std::vector<double> feature_displacement_;
 
 	// Private, read one single feature file
-	std::vector<double> Read_One_File(std::string file_name);
-	std::vector<bool> Threshold_One_Feature(std::pair<double, double> &thres, std::vector<double> &feature);
+	std::vector<double> ReadOneFile(std::string file_name);
+	std::vector<bool> ThresholdOneFeature(std::pair<double, double> &thres, std::vector<double> &feature);
+
+	// Using a moving window to smooth the binary data
+	void SmoothOneBinaryArray(std::vector<bool> &input_array);
 };
 
 #endif

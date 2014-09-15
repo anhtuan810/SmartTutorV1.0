@@ -15,6 +15,21 @@
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile />
     <ExpressionBlendVersion>12.0.50429.0</ExpressionBlendVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -103,6 +118,7 @@
     </Compile>
     <Compile Include="RequiredInterface\GUIFeatureInterface.cs" />
     <Compile Include="RequiredInterface\GUIRecorderInterface.cs" />
+    <Compile Include="Results\ProcessResultToDisplay.cs" />
     <Compile Include="Results\ucBriefResults.xaml.cs">
       <DependentUpon>ucBriefResults.xaml</DependentUpon>
     </Compile>
@@ -111,6 +127,9 @@
     </Compile>
     <Compile Include="Results\ucOneFeature.xaml.cs">
       <DependentUpon>ucOneFeature.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Results\ucTimeLine.xaml.cs">
+      <DependentUpon>ucTimeLine.xaml</DependentUpon>
     </Compile>
     <Compile Include="Shared\Constants.cs" />
     <Compile Include="Shared\Functions.cs" />
@@ -154,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Results\ucTimeLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -195,6 +218,23 @@
       <Project>{2735452f-5052-42ba-bb26-2cbfb60c7c97}</Project>
       <Name>RecorderAVI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

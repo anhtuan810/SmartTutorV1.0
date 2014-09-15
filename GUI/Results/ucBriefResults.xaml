@@ -19,8 +19,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <local:ucTitle x:Name="title_bar" Grid.ColumnSpan="2" Margin="0,10,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto"/>
-        <local:ucMediaPlayer x:Name="media" Padding="10" Margin="0,10,0,5" Grid.Row="1"/>
-        <Grid x:Name="grdScores" Margin="10,5,10,20" Grid.Row="2" Background="#FFF5E5E5">
+        <local:ucMediaPlayer x:Name="media" Padding="10" Margin="10,20,0,5" Grid.Row="1" Background="#FFF5E5E5"/>
+        <Grid x:Name="grdScores" Margin="10,5,0,20" Grid.Row="2" Background="#FFF5E5E5">
         	<Grid.RowDefinitions>
         		<RowDefinition Height="60"/>
         		<RowDefinition/>
@@ -40,7 +40,7 @@
         		<ColumnDefinition/>
         		<ColumnDefinition/>
         	</Grid.ColumnDefinitions>
-        	<Label Content="Data taken: " HorizontalAlignment="Left" Margin="0" VerticalContentAlignment="Center" Grid.ColumnSpan="6" Width="620" FontSize="18.667"/>
+        	<Label x:Name="lblDateTimeTaken" Content="Data taken: " HorizontalAlignment="Left" Margin="10,0,0,0" VerticalContentAlignment="Center" Grid.ColumnSpan="6" Width="620" FontSize="18.667"/>
         	<Label Content="Overall" HorizontalAlignment="Left" Margin="10,0,0,49.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.RowSpan="2" Grid.Row="2"/>
         	<Label Content="Contraction" HorizontalAlignment="Left" Margin="10,0.333,0,47.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="3" Grid.RowSpan="2"/>
         	<Label Content="Direction" HorizontalAlignment="Left" Margin="10,2.333,0,49.667" VerticalContentAlignment="Center" Width="130" FontSize="15" Grid.Row="4" Grid.RowSpan="2"/>
@@ -62,7 +62,7 @@
         	<Path Grid.Column="5" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Left" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
         	<Path Grid.Column="5" Data="M227,114.5 L227,408.06132" Fill="#FF767985" HorizontalAlignment="Right" Margin="0,-25,0,0" Grid.Row="2" Grid.RowSpan="7" Stretch="Fill" Stroke="#FFBDA7A7" Width="1" Opacity="0.5"/>
         </Grid>
-        <Grid Grid.Column="1" Margin="10,20" Grid.Row="1" Grid.RowSpan="2">
+        <Grid Grid.Column="1" Margin="5,20,10,20" Grid.Row="1" Grid.RowSpan="2">
         	<Grid.RowDefinitions>
         		<RowDefinition/>
         		<RowDefinition/>

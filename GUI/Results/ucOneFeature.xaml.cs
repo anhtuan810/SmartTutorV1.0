@@ -38,11 +38,6 @@ namespace GUI
         private List<bool> binary_1_ = new List<bool>();
         private List<bool> binary_2_ = new List<bool>();
         private List<bool> binary_3_ = new List<bool>();
-
-        // Generated from binary lists, support visualisation
-        private List<int> id_start_ = new List<int>();
-        private List<int> id_end_ = new List<int>();
-        private List<Rectangle> timeline_segments_ = new List<Rectangle>();
         
 
 		public ucOneFeature()
@@ -79,6 +74,8 @@ namespace GUI
             this.arc2.EndAngle = this.arc2.StartAngle + 360 * GetPercentageofBinary(binary_2_);
             this.arc3.StartAngle = this.arc2.EndAngle;
             this.arc3.EndAngle = 360;
+
+            
         }
 
 
@@ -87,85 +84,16 @@ namespace GUI
         /// </summary>
         public void UpdateMediaPosition(double media_position_in_ms, double media_duration)
         {
-            if (this.is_showing_timeline_)
-            {
-                Thickness margin = new Thickness();
-                margin.Left = this.grdTimeline.ActualWidth * (media_position_in_ms / media_duration);
-                this.line_media_position.Margin = margin;
-            }
+            this.timeline1.UpdateMediaPosition(media_position_in_ms, media_duration);
+            this.timeline2.UpdateMediaPosition(media_position_in_ms, media_duration);
+            this.timeline3.UpdateMediaPosition(media_position_in_ms, media_duration);
+
+            this.timeline1.UpdateData(binary_1_, comment_1_);
+            this.timeline2.UpdateData(binary_2_, comment_2_);
+            this.timeline3.UpdateData(binary_3_, comment_3_);
         }
 
-
-        /// <summary>
-        /// private, Update the time-line that represent codewords 
-        /// Called when click on codeword of pie chart
-        /// </summary>
-        private void DisplayTimeLine_n_Comment(List<bool> binary_, string comment)
-        {
-            this.is_showing_timeline_ = true;
-            this.lblComment.Content = comment;
-
-            ///////////////////////////////////////////////////////////////////////////////////
-            // Clean up
-            List<UIElement> to_delete = new List<UIElement>();
-            foreach(UIElement child in this.grdTimeline.Children)
-            {
-                if (child.Uid == "segment")
-                    to_delete.Add(child);
-            }
-            foreach(UIElement child in to_delete)
-            {
-                this.grdTimeline.Children.Remove(child);
-            }
-            timeline_segments_.Clear();
-            id_start_.Clear();
-            id_end_.Clear();
-
-            ///////////////////////////////////////////////////////////////////////////////////
-            // Separate the binary list into separated segments
-            if (binary_[0])
-                id_start_.Add(0);
-            for (int i = 0; i < binary_.Count - 1; i++)
-            {
-                if (!binary_[i] && binary_[i + 1])
-                {
-                    id_start_.Add(i + 1);
-                }
-                if (binary_[i] && !binary_[i + 1])
-                {
-                    id_end_.Add(i);
-                }
-            }
-            if (binary_[binary_.Count - 1])
-                id_end_.Add(binary_.Count - 1);
-            
-            ////////////////////////////////////////////////////////////////////////////////////
-            // Draw the bars
-            for (int i = 0; i < id_start_.Count; i++)
-            {
-                Rectangle bar = new Rectangle();
-                bar.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                bar.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                bar.Height = 15;
-                bar.Width = this.grdTimeline.ActualWidth * (id_end_[i] - id_start_[i]) / binary_.Count;
-                Thickness margin = bar.Margin;
-                margin.Left = this.grdTimeline.ActualWidth * id_start_[i] / binary_.Count;
-                bar.Margin = margin;
-                SolidColorBrush brush = new SolidColorBrush(Color.FromRgb(100, 100, 100));
-                bar.Fill = brush;
-                bar.MouseDown += bar_MouseDown;
-                bar.Tag = i;
-                bar.Uid = "segment";
-
-                timeline_segments_.Add(bar);
-            }
-            
-            for (int i = 0; i < timeline_segments_.Count; i++)
-            {
-                this.grdTimeline.Children.Add(timeline_segments_[i]);
-            }
-        }
-
+        
 
         /// <summary>
         /// Get percentage of appearance of one codeword via a binary list
@@ -186,29 +114,29 @@ namespace GUI
 
         void bar_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            // Get the id back from the chosen bar
-            int id = (int)((Rectangle)sender).Tag;
-            int segment_start_id = id_start_[id];
-            int segment_end_id = id_end_[id];
+            //// Get the id back from the chosen bar
+            //int id = (int)((Rectangle)sender).Tag;
+            //int segment_start_id = id_start_[id];
+            //int segment_end_id = id_end_[id];
 
-            // Adjust the start and end position of the video
-            // Search for the media player user control
+            //// Adjust the start and end position of the video
+            //// Search for the media player user control
 
         }
 
         private void arc1_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DisplayTimeLine_n_Comment(binary_1_, comment_1_);
+            //DisplayTimeLine_n_Comment(binary_1_, comment_1_);
         }
 
         private void arc2_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DisplayTimeLine_n_Comment(binary_2_, comment_2_);
+            //DisplayTimeLine_n_Comment(binary_2_, comment_2_);
         }
 
         private void arc3_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DisplayTimeLine_n_Comment(binary_3_, comment_3_);
+            //DisplayTimeLine_n_Comment(binary_3_, comment_3_);
         }
 
         private void lbl1_MouseDown(object sender, MouseButtonEventArgs e)

@@ -10,7 +10,7 @@
 	d:DesignWidth="640" d:DesignHeight="480" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave">
 
 	<Grid x:Name="LayoutRoot">
-		<MediaElement x:Name="mediaElement" Margin="0" LoadedBehavior="Manual" UnloadedBehavior="Manual" MouseDown="mediaElement_MouseDown"/>
+		<MediaElement x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Manual" MouseDown="mediaElement_MouseDown" OpacityMask="#FFF5E5E5"/>
 		<Border x:Name="control_panel" BorderBrush="Black" BorderThickness="1" Height="40" Margin="20,0,20,10" VerticalAlignment="Bottom" CornerRadius="20" Background="#FF020000" Opacity="0.3">
 			<Grid Margin="0,0,-2,-2">
 				<Grid.ColumnDefinitions>

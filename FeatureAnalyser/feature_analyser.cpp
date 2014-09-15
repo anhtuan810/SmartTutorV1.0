@@ -37,17 +37,17 @@ void FeatureAnalyser::ReadFeatures(
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 void FeatureAnalyser::ReadFeatures_FromFiles(std::string data_folder)
 {
-	feature_contraction_ = Read_One_File(data_folder + "contraction.txt");
-	feature_stability_ = Read_One_File(data_folder + "stability.txt");
-	feature_energy_ = Read_One_File(data_folder + "energy.txt");
-	feature_direction_ = Read_One_File(data_folder + "direction.txt");
-	feature_impulse_ = Read_One_File(data_folder + "impulse.txt");
-	feature_displacement_ = Read_One_File(data_folder + "displacement.txt");
+	feature_contraction_ = ReadOneFile(data_folder + "contraction.txt");
+	feature_stability_ = ReadOneFile(data_folder + "stability.txt");
+	feature_energy_ = ReadOneFile(data_folder + "energy.txt");
+	feature_direction_ = ReadOneFile(data_folder + "direction.txt");
+	feature_impulse_ = ReadOneFile(data_folder + "impulse.txt");
+	feature_displacement_ = ReadOneFile(data_folder + "displacement.txt");
 }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-std::vector<double> FeatureAnalyser::Read_One_File(std::string file_name)
+std::vector<double> FeatureAnalyser::ReadOneFile(std::string file_name)
 {
 	vector<double> feature;
 	ifstream reader(file_name);
@@ -76,7 +76,7 @@ ThresholdingResult FeatureAnalyser::ApplyThreshold(Thresholds &threshold)
 
 	for (int i = Codewords(0); i < Codewords(kCodebookSize); ++i)
 	{
-		std::vector<bool> binary = Threshold_One_Feature(threshold.GetThresholds(Codewords(i)), features_list[i]);
+		std::vector<bool> binary = ThresholdOneFeature(threshold.GetThresholds(Codewords(i)), features_list[i]);
 		result.AddCodewordBinary(binary);
 	}
 	return result;
@@ -84,7 +84,7 @@ ThresholdingResult FeatureAnalyser::ApplyThreshold(Thresholds &threshold)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-std::vector<bool> FeatureAnalyser::Threshold_One_Feature(std::pair<double, double> &thres, std::vector<double> &feature)
+std::vector<bool> FeatureAnalyser::ThresholdOneFeature(std::pair<double, double> &thres, std::vector<double> &feature)
 {
 	std::vector<bool> result;
 	for (size_t i = 0; i < feature.size(); i++)
@@ -95,6 +95,18 @@ std::vector<bool> FeatureAnalyser::Threshold_One_Feature(std::pair<double, doubl
 			result.push_back(false);
 	}
 	return result;
+}
+
+
+void FeatureAnalyser::SmoothThresholdingResult(ThresholdingResult &original_result)
+{
+	
+}
+
+
+void FeatureAnalyser::SmoothOneBinaryArray(std::vector<bool> &input_array)
+{
+	cons
 }
 
 

@@ -20,6 +20,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GUI.IO;
+using System.IO;
+using GUI.Results;
 
 namespace GUI
 {
@@ -28,42 +30,47 @@ namespace GUI
 	/// </summary>
 	public partial class ucBriefResults : UserControl
 	{
-        private Result result_;
-        private string data_folder = @"D:\test data\635452884127274310\";
+        private Result result_, result_to_display_;
+        private string data_folder_ = @"D:\test data\635452884127274310\";
 
 		public ucBriefResults()
 		{
 			this.InitializeComponent();
+            FileInfo file_info = new FileInfo(data_folder_ + "webcam_data.avi");
+            this.lblDateTimeTaken.Content = "Recorded in " +  file_info.CreationTime.ToString();
 
             this.title_bar.UpdateData("RESULT", ContentInMainForm.Home);
             this.media.TimerTrackbar.Tick += timer_trackbar__Tick;
 
             ResultReader result_reader = new ResultReader();
-            result_ = result_reader.ReadData(data_folder + @"result\");
-            this.media.LoadVideo(data_folder + "webcam_data.avi");
+            result_ = result_reader.ReadData(data_folder_ + @"result\");
+            ProcessResultToDisplay result_processor = new ProcessResultToDisplay(result_);
+            result_to_display_ = result_processor.SmoothBinaryCodeword();
+
+            this.media.LoadVideo(data_folder_ + "webcam_data.avi");
 
 
             this.feature1.InputData(
                 "Openness", "Closed", "Average", "Opened",
                 "Closed Postures", "Average Openness", "Opened Postures",
-                result_.binary_contraction_low_,
-                result_.binary_contraction_average_,
-                result_.binary_contraction_high_);
+                result_to_display_.binary_contraction_low_,
+                result_to_display_.binary_contraction_average_,
+                result_to_display_.binary_contraction_high_);
 
             this.feature2.InputData(
                 "Energy", "Low", "Average", "High", 
                 "Low energy", "Average energy", "High energy",
-                result_.binary_energy_low_,
-                result_.binary_energy_average_,
-                result_.binary_energy_high_
+                result_to_display_.binary_energy_low_,
+                result_to_display_.binary_energy_average_,
+                result_to_display_.binary_energy_high_
                 );
 
             this.feature3.InputData(
                 "Stability", "Lean left", "Balanced", "Lean Right",
                 "Leaning to the left", "Balanced, good posture", "Leaning to the right",
-                result_.binary_lean_left_,
-                result_.binary_balanced_,
-                result_.binary_lean_right_
+                result_to_display_.binary_lean_left_,
+                result_to_display_.binary_balanced_,
+                result_to_display_.binary_lean_right_
                 );
 
             //    "Stability", "Left", "Balanced", "Right");
